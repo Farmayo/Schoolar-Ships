@@ -4,13 +4,9 @@
  * and open the template in the editor.
  */
 package Data.Dao;
-
+/*
 import Data.Vos.StudentVo;
 
-/**
- *
- * @author ESTACION
- */
 public class Test {
 
     public Test() {
@@ -37,3 +33,4 @@ public class Test {
     }
     
 }
+*/
