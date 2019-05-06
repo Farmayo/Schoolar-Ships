@@ -1,9 +1,3 @@
-<%-- 
-    Document   : MainPage
-    Created on : 4/05/2019, 08:32:49 PM
-    Author     : farma
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

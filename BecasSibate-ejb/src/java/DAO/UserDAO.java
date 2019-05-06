@@ -11,7 +11,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.ejb.Stateless;
 
+@Stateless
 public class UserDAO implements Contract<UserDTO> {
 
     private static final String SQL_INSERT = "INSERT INTO user (User_id, name, email, url_foto, password) VALUES(?,?,?,?,?)";

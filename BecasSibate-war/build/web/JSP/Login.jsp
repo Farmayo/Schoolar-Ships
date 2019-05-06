@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Login
-    Created on : 4/05/2019, 06:27:16 PM
-    Author     : farma
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,16 +12,17 @@
         <section class="globalSect">
             <section id="formSect">
                 <h2>Ingresar a perfil</h2>
-                <form action="MainPage.jsp">
+                <%@page import="Controller.Login" %>
+                <form action="Login">
                     <p>Documento de Identidad</p>
                     <img src="../Pictures/IconUserLogin.png">
-                    <input id="loginForm" name="Usuario" placeholder="Ingrese documento de Identidad"/>
+                    <input id="loginForm" name="username" placeholder="Ingrese documento de Identidad"/>
                     <br>
                     <p>Contrase&ntilde;a</p>
                     <img src="../Pictures/IconPassLogin.png">
-                    <input id="loginForm" name="Contrasena" placeholder="Ingrese su Contraseña"/>
+                    <input id="loginForm" name="password" placeholder="Ingrese su Contraseña"/>
                     <br><br>
-                    <button id="btnLogin" value="Ingresar" name="Ingresar">Ingresar</button>
+                    <button id="btnLogin">Ingresar</button>
                     <br><br>
                     <input type="checkbox"/><a>Guardar Sesi&oacute;n</a> || <a>Olvidaste tu Contraseña</a>
                 </form>
