@@ -29,16 +29,6 @@
     height: auto;
 }
 
-#footerSect {
-    display: flex;
-    background: lightgray;
-    padding: 10px;
-}
-
-#footerSect section {
-    margin-right: 25px;
-}
-
 #btnLogin {
     color: white;
     border: red 1px solid;

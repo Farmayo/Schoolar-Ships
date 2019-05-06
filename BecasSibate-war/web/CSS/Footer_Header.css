@@ -1,0 +1,9 @@
+#footerSect {
+    display: flex;
+    background: lightgray;
+    padding: 10px;
+}
+
+#footerSect section {
+    margin-right: 25px;
+}

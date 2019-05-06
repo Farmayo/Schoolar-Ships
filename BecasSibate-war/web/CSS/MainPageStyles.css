@@ -1,0 +1,54 @@
+#sectExit {
+    background: red;
+}
+#icons img{
+    width: 40px;
+    height: 40px;
+}
+
+#sect1 {
+    display: flex;
+    padding: 10px; 
+    background: lightcoral;
+}
+
+#sect2 {
+    background: red;
+    display: inline-block;
+}
+
+#sect2 section {
+    display: grid;
+    padding: 30px 30px 30px 30px;
+}
+
+#sect2 #sectPerfil {
+    padding: 0px 30px 0px 30px;
+}
+
+#sect3 {
+    display: block;
+    background: lightblue;
+}
+
+#sect3 #menu {
+    display: flex;
+    margin: 20px;
+}
+
+#sect3 #menu a label {
+    padding: 0px 30px 0px 30px;
+}
+#sectMainPage {
+    display: flex;
+}
+
+
+#sectInformacion {
+    display: flex;
+}
+
+#sectInfo {
+    border: black 2px solid;
+    display: block;
+}

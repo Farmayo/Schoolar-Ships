@@ -9,10 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" href="../CSS/LoginStyles.css" rel="stylesheet">
+        <link type="text/css" href="CSS/LoginStyles.css" rel="stylesheet">
+        <link type="text/css" href="CSS/Footer_Header.css" rel="stylesheet">
     </head>
     <header>
-        <img src="../Pictures/sibateLogo.png" width="100%" alt="SibateLogo">
+        <img src="Pictures/sibateLogo.png" width="100%" alt="SibateLogo">
     </header>
     <body>
         <section class="globalSect">
@@ -20,11 +21,11 @@
                 <h2>Ingresar a perfil</h2>
                 <form action="MainPage.jsp">
                     <p>Documento de Identidad</p>
-                    <img src="../Pictures/IconUserLogin.png">
+                    <img src="Pictures/IconUserLogin.png">
                     <input id="loginForm" name="Usuario" placeholder="Ingrese documento de Identidad"/>
                     <br>
                     <p>Contrase&ntilde;a</p>
-                    <img src="../Pictures/IconPassLogin.png">
+                    <img src="Pictures/IconPassLogin.png">
                     <input id="loginForm" name="Contrasena" placeholder="Ingrese su Contraseña"/>
                     <br><br>
                     <button id="btnLogin" value="Ingresar" name="Ingresar">Ingresar</button>

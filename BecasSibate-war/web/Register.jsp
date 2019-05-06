@@ -9,9 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" href="../CSS/LoginStyles.css" rel="stylesheet">
-        <link type="text/css" href="../CSS/RegisterStyles.css" rel="stylesheet">
+        <link type="text/css" href="CSS/RegisterStyles.css" rel="stylesheet">
+        <link type="text/css" href="CSS/Footer_Header.css" rel="stylesheet">
     </head>
+    <header>
+        <img src="Pictures/sibateLogo.png" width="100%" alt="SibateLogo">
+    </header>
     <body>
         <section class="globalSect">
             <form action="Login.jsp" method="post" enctype="multipart/form-data">
@@ -67,4 +70,14 @@
             </form>
         </section>
     </body>
+    <footer>
+        <section id="footerSect">
+            <section>Siguenos en nuestras redes sociales</section>
+            <section><a href="#">Instagram <img src=""></a></section>
+            <section><a href="#">Faceboook <img src=""></a></section>
+            <section><a href="#">Twitter <img src=""></a></section>
+            <section><a href="#">YouTube <img src=""></a></section>
+            <section><a href="#">Elaborado por Didacticos CSJ</a></section>            
+        </section>
+    </footer>
 </html>
