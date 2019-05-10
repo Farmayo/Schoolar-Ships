@@ -22,8 +22,9 @@ public class UserDAO implements Contract<UserDTO> {
     private static final String SQL_READ = "SELECT * FROM user WHERE User_id = ?";
     private static final String SQL_READALL = "SELECT * FROM user";
     
-    private static final ConnectionDB conn = ConnectionDB.getInstance();
+    private static ConnectionDB conn = ConnectionDB.getInstance();
     
+    @Override
     public boolean create(UserDTO in) {
         PreparedStatement ps;
         try {
@@ -88,6 +89,7 @@ public class UserDAO implements Contract<UserDTO> {
         UserDTO user = null;
 
         try {
+            checkConnection();
             ps = conn.getConnection().prepareStatement(SQL_READ);
             ps.setString(1, key.toString());
 
@@ -101,7 +103,6 @@ public class UserDAO implements Contract<UserDTO> {
         } finally {
             conn.close();
         }
-        
         return user;
     }
 
@@ -125,6 +126,13 @@ public class UserDAO implements Contract<UserDTO> {
             conn.close();
         }
         return users;
+    }
+    
+    
+    private void checkConnection() {
+        if (conn == null || conn.getConnection() == null) {
+            conn = ConnectionDB.getInstance();
+        }
     }
     
 }

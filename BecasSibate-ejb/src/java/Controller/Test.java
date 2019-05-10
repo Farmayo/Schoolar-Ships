@@ -11,12 +11,9 @@ import java.util.List;
 public class Test {
 
     public Test() {
-        PhoneDAO phoneDAO = new PhoneDAO();
-        List<PhoneDTO> phones = new ArrayList<>();
-        
-        phones = phoneDAO.readAll();
-        
-        System.out.println("N° Phones: " + phones.size());
+        UserDAO userDAO = new UserDAO();
+        UserDTO userDTO = userDAO.read("1072197550");
+        System.out.println(userDTO.getEmail());
     }
     
     public static void main(String[] args) {
