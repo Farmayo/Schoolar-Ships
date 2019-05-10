@@ -19,65 +19,67 @@
         <section class="globalSect">
             <form action="Login.jsp" method="post" enctype="multipart/form-data">
                 <section id="formRegister">
-                    <h2>Datos personales aspirante </h2>
+                    <h2>Applicant personal data</h2>
                     <section>
-                        <input id="loginForm" name="Nombre" placeholder="Nombre"/><label>*</label>
+                        <input id="loginForm" name="Name" placeholder="Name"/><label>*</label>
                         <br><br>                    
-                        <input id="loginForm" name="Documento" placeholder="Documento de Identidad"/><label>*</label>
+                        <input id="loginForm" name="Document" placeholder="Identity Document"/><label>*</label>
                         <br>
-                        <h4>Fecha de Nacimiento:<label>*</label></h4>
-                        <input id="loginForm" type="date "name="Fecha"/>
+                        <h4>Birthdate<label>*</label></h4>
+                        <input id="loginForm" type="date "name="Date"/>
                         <br>
-                        <label>Hombre</label>
-                        <input type="radio" name="sexo" value="Hombre"/>
-                        <label>Mujer</label>
-                        <input type="radio" name="sexo" value="Mujer"/>
+                        <label>Male</label>
+                        <input type="radio" name="sex" value="Male"/>
+                        <label>Female</label>
+                        <input type="radio" name="sex" value="Female"/>
                         <label>*</label>
                     </section>
                     <br>
                     <section>
-                        <input id="loginForm" name="Nombre" placeholder="Nombre"/>
+                        <input id="loginForm" name="LastName" placeholder="LastName"/>
                         <br><br>                    
-                        <input id="loginForm" name="Documento" placeholder="Ingrese su Contraseña"/>
+                        <input id="loginForm" name="Email" placeholder="Email"/>
                         <br><br>
-                        <input id="loginForm" name="Usuario" placeholder="Ingrese documento de Identidad"/>
+                        <input id="loginForm" name="Username" placeholder="Username"/>
+                        <br><br>
+                        <input id="loginForm" name="Password" placeholder="Password"/>
                         <br><br>                    
-                        <input id="loginForm" name="Contrasena" placeholder="Ingrese su Contraseña"/>
+                        <input id="loginForm" name="PasswordR" placeholder="Repeat Password"/>
                         <br>
                     </section>
 
                 </section>
                 <section id="archivosSect">
-                    <label>Certificación de Residencia en el Municipio</label>
+                    <label>Certification of Residence in the Municipality</label>
                     <input type="file" name="certificacionAccionComunal" accept=".pdf" /><br><br>
-                    <label>Resultados Prueba Saber 11</label>
+                    <label>Results Test Know 11</label>
                     <input type="file" name="Icfes" accept=".pdf" /><br><br>
-                    <label>Carta del Sisben</label>
+                    <label>Letter of the Sisben</label>
                     <input type="file" name="Sisben" accept=".pdf" /><br><br>
-                    <label>Actas de Grado</label>
+                    <label>Degree Records</label>
                     <input type="file" name="ActaGrado" accept=".pdf" /><br><br>
-                    <label>Diploma de Grado</label>
+                    <label>Degree Diploma</label>
                     <input type="file" name="DiplomaGrado" accept=".pdf" /><br><br>
                     <br><br>
-                    <label>Nota: Los archivos deben ser adjuntados en formato PDF</label>
+                    <label>Note: The files must be attached in PDF format</label>
                     <br><br>
-                    <button id="btnRegister" value="Postular" name="Postular">Postularse</button>
+                    <button id="btnRegister" value="Postular" name="Postular">Apply</button>
                     <br><br>
                 </section>
             </form>
             <form action="Login.jsp">
-                <button id="btnRegister" value="Cancelar" name="Cancelar">Cancelar</button>
+                <button id="btnRegister" value="Cancelar" name="Cancelar">Cancel</button>
             </form>
         </section>
     </body>
     <footer>
         <section id="footerSect">
-            <section>Siguenos en nuestras redes sociales</section>
+            <section>Follow us on our Social Networks</section>
             <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
             <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
             <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
             <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
-            <section><a href="#">Elaborado por Didacticos CSJ</a></section>            
+            <section><a href="#">Elaborated by Didacticos CSJ</a></section>            
         </section>
     </footer>
 </html>

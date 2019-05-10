@@ -18,45 +18,46 @@
     <body>
         <section class="globalSect">
             <section id="formSect">
-                <h2>Ingresar a perfil</h2>
+                <h2>Login to Profile</h2>
                 <form action="MainPage.jsp">
-                    <p>Documento de Identidad</p>
+                    <p>Identity Document</p>
                     <img src="Pictures/IconUserLogin.png">
-                    <input id="loginForm" name="Usuario" placeholder="Ingrese documento de Identidad"/>
+                    <input id="loginForm" name="User" placeholder="Enter our Identity Document"/>
                     <br>
-                    <p>Contrase&ntilde;a</p>
+                    <p>Password</p>
                     <img src="Pictures/IconPassLogin.png">
-                    <input id="loginForm" name="Contrasena" placeholder="Ingrese su Contraseña"/>
+                    <input id="loginForm" name="Password" placeholder="Enter your Password"/>
                     <br><br>
-                    <button id="btnLogin" value="Ingresar" name="Ingresar">Ingresar</button>
+                    <button id="btnLogin" value="Enter" name="Enter">Enter</button>
                     <br><br>
-                    <input type="checkbox"/><a>Guardar Sesi&oacute;n</a> || <a>Olvidaste tu Contraseña</a>
+                    <input type="checkbox"/><a>Save Session</a> || <a href="#">Did you forget your password?</a>
                 </form>
             </section>
             <section id="info-regSect">
                 <section id="infoSect">
                     <form>
-                        <h2>¿De que Consiste el Programa?</h2>
-                        <p>El programa de mejores bachilleres consiste en otorgar el beneficio académico anualmente a los 
-                            veinte (20) mejores estudiantes del municipio de Sibaté, que hayan terminado el grado once (11)
-                            y hayan obtenido los mejores puntajes en las pruebas realizadas por el ICFES y que estén
-                            calificados en el SISBEN III en el rango que aplique para nivel 1,2,3 y su finalidad será financiar la 
-                            educación superior Universitaria a nivel pregrado en una universidad ubicada en el territorio 
-                            Nacional.
+                        <h2>What is the Program?</h2>
+                        <p>
+                            The best baccalaureate program consists in granting the academic benefit annually to the
+                            twenty (20) best students of the municipality of Sibaté, who have completed the eleventh grade (11)
+                            and have obtained the best scores in the tests carried out by the ICFES and that are
+                            qualified in the SISBEN III in the range that applies for level 1,2,3 and its purpose will be to finance the
+                            university education at undergraduate level in a university located in the territory
+                            National.
                         </p>
-                        <button id="btnInfo" value="SolicitarInfo" name="SolicitarInfo">Solicitar Informaci&oacute;n</button>
+                        <button id="btnInfo" value="SolicitarInfo" name="SolicitarInfo">Ask for information</button>
                     </form>
                 </section>
                 <section id="regSect">
                     <form action="Register.jsp">
-                        <h2>Requisitos</h2>
-                        <p>Para postularse para una de estas becas se deben presentar los siguientes documentos:</p>
-                        <p>Documento de Identidad</p>
-                        <p>Certificación Junta de Acci&oacute;n Comunal</p>
-                        <p>Resultado prueba de estado Saber 11</p>
-                        <p>Acta de Grado</p>
-                        <p>Diploma de grado</p>
-                        <button id="btnInfo" value="Postular" name="Postular">Postularse</button>
+                        <h2>Requirements</h2>
+                        <p> To apply for one of these scholarships you must submit the following documents: </ p>
+                        <p> Identity Document </ p>
+                        <p> Certification Board of Community Action </ p>
+                        <p> Result test of state Know 11 </ p>
+                        <p> Grade Certificate </ p>
+                        <p> Diploma of degree </ p>
+                            <button id="btnInfo" value="Postular" name="Postular">Apply</button>
                     </form>
                 </section>
             </section>
@@ -64,12 +65,12 @@
     </body>
     <footer>
         <section id="footerSect">
-            <section>Siguenos en nuestras redes sociales</section>
+            <section>Follow us on our Social Networks</section>
             <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
             <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
             <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
             <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
-            <section><a href="#">Elaborado por Didacticos CSJ</a></section>            
+            <section><a href="#">Elaborated by Didacticos CSJ</a></section>            
         </section>
     </footer>
 </html>

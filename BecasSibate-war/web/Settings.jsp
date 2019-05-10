@@ -1,6 +1,6 @@
 <%-- 
-    Document   : MainPage
-    Created on : 5/05/2019, 05:56:21 PM
+    Document   : Settings
+    Created on : 10/05/2019, 12:19:06 PM
     Author     : farma
 --%>
 
@@ -9,9 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" href="CSS/Footer_Header.css" rel="stylesheet">
+        <link type="text/css" href="CSS/SettingsStyles.css" rel="stylesheet">
         <link type="text/css" href="CSS/MainPageStyles.css" rel="stylesheet">
-        <title>Main Page</title>
+        <link type="text/css" href="CSS/Footer_Header.css" rel="stylesheet">
+        <title>JSP Page</title>
     </head>
     <body>
         <section id="globalSect">
@@ -51,44 +52,54 @@
                         </br></br>
                         <a href="#">Update Files</a>
                         </br></br>
-                        <a href="Settings.jsp">Settings</a>
+                        <a href="#">Settings</a>
                     </section>
                 </section>
 
-                <section id="sect2-2">
-                    <section id="sect2-21">
+                <section id="sectSettings1">
+                    <section id="sectSettings1-1">
+                        <h2>Change Profile Picture</h2>
+                        
                         <section>
-                            <label>INFO</label>
-                            <br>
-                            <label>__________________________</label>
+                            <img id="imgUser" src="Pictures/IconUserLogin.png">
                         </section>
-                        <section id="sect2-211">
-                            <section>
-                                <a>Semestres</a>
-                            </section>
-                            <section>
-                                <a>Solicitudes Comite Tecnico</a>
-                            </section>
-                            <section>
-                                <a>Cuentas de Cobro</a>
-                            </section>
+                        <section>
+                            <a id="icons"><img src="Pictures/deleteIcon.png"></a>
+                            <h4>Delete</h4>
+                        </section>
+                        <section>
+                            <a id="icons"><img src="Pictures/uploadFiles.png"></a>
+                            <h4>Upload from Computer</h4>
+                        </section>
+                        <section>
+                             <a id="icons"><img src="Pictures/uploadURL.png"></a>
+                             <h4>Upload from URL</h4>
+                        </section>          
+                        
+                    </section>
+                    <section id="sectSettings1-2">
+                        <h2>Privacity</h2>
+                        <section>
+                            <form action="#">
+                                <h3>Change Username</h3>
+                                <input type="text" name="Username" placeholder="New Username" />
+                                <h3>Change Password</h3>
+                                <input type="text" name="Password" placeholder="Current Password" />
+                                <input type="text" name="NewPassword" placeholder="New Password" />
+                                <input type="text" name="NewPasswordR" placeholder="Repeat New Password" />
+                                </br></br>
+                                <button>Confirm Changes</button>
+                                <button>Cancel</button>
+                            </form>
                         </section>
                     </section>
-                    <section id="sect2-22">
-                        <section id="sect2-221">
-                            <label>Semestre Actual</label>
-                        </section>
-                        <section id="sect2-222">
-                            <section id="sect2-223">
-                                <label>Informacion</label>
-                            </section>
-                            <section id="sect2-224">
-                                <h4>Solicitudes en Proceso</h4>
-                                <label>Information</label>
-                            </section>
-                        </section>
+                    <section id="sectSettings1-3">
+                        <h2>Documents</h2>
                     </section>
+
                 </section>
+
+
             </section>
         </section>
     </body>

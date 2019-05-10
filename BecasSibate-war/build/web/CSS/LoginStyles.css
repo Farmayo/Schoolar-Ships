@@ -4,6 +4,7 @@
     text-align: justify;
     width: auto;
     height: auto;
+    position: relative;
 }
 
 #formSect {
