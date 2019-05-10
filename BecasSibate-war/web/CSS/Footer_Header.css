@@ -6,4 +6,15 @@
 
 #footerSect section {
     margin-right: 25px;
+    display: flex;
+}
+
+#footerSect section a {
+    font-style: normal;
+}
+
+#footerSect section a img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
 }
