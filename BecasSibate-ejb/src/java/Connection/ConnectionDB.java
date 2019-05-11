@@ -27,9 +27,8 @@ public class ConnectionDB {
     
     private void createConnection() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            String auxConn = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false";
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/scholarship" + auxConn, "root", "Jair98082864660leo");
+            Class.forName("com.mysql.jdbc.Driver");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/scholarship?zeroDateTimeBehavior=convertToNull", "root", "Jair98082864660leo");
         } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Error: " + e);
         }
