@@ -1,0 +1,118 @@
+#globalSect {
+    display: block;
+}
+
+#imgUser{
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    display: block;
+}
+
+#textInfo {
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+#icons img{
+    width: 40px;
+    height: 40px;
+}
+
+#sect1 {
+    display: flex;
+    background: lightcoral;
+    border: black 1px solid;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+#sect1 #sect1-1 {
+    padding: 25px 100px 25px 100px;
+    text-align: center;
+    border: black 1px solid;
+}
+
+#sect1 #sect1-2 {
+    padding: 25px 100px 25px 100px;
+    text-align: center;
+}
+
+#sect1 #sect1-3 {
+    padding: 25px 100px 25px 250px;
+    text-align: center;
+    display: flex;
+    border: black 1px solid;
+}
+
+#sect1 #sect1-3 section {
+    border: black 1px solid;
+}
+#sect2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    display: flex;
+    border: black 1px solid;
+    border-radius: 10px;
+}
+
+#sect2 section {
+    display: block;
+    padding: 10px 30px 10px 30px;
+}
+
+#sect2-1 {
+    margin: 10px;
+    border: 1px black solid;
+    border-radius: 10px;    
+    background: #B70914;
+}
+
+#sect2-12 {
+    border: 1px black solid;
+    color: white;
+}
+
+#sect2-2 {
+    margin: 10px;
+    border: 1px black solid;
+    border-radius: 10px;  
+    position: relative;
+}
+
+#sect2-211 section{
+    display: inline-block;
+    margin: 7px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+#sect2-22 {
+    border: 1px black solid;
+    border-radius: 10px;  
+    position: relative;
+    display: block;
+}
+
+#sect2-221 {
+    border-bottom: 1px black solid;
+    background: #B70914;
+}
+
+#sect2-222 {
+    display: inline;
+    margin: 10px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+#sect2-222 section{
+    display: inline-block;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px;
+}
