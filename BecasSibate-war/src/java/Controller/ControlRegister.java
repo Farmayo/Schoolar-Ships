@@ -7,6 +7,7 @@ package Controller;
 
 import DTO.StudentDTO;
 import DTO.UserDTO;
+import DataControl.Data;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
@@ -14,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.util.Pair;
 import javax.ejb.EJB;
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -36,6 +38,8 @@ public class ControlRegister extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            
+            Data control = Data.getInstance();
             
             String name = request.getParameter("name");
             String lastname = request.getParameter("lastname");
@@ -65,9 +69,12 @@ public class ControlRegister extends HttpServlet {
             
             userStudent = new UserStudent(userDTO, studentDTO);
             if(userStudent.create()) {
-                out.write("<h1>" + userDTO.getName() + "</h1>");
+                response.sendRedirect("Login.jsp");
+                control.setUserStudent(null);
+            } else {
+                control.setUserStudent(new Pair<>(userDTO, studentDTO));
+                response.sendRedirect("Register.jsp");
             }
-            
         }
     }
 

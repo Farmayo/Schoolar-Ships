@@ -4,12 +4,14 @@
     Author     : farma
 --%>
 
+<%@page import="DataControl.Data"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" href="CSS/RegisterStyles.css" rel="stylesheet">
+        <link type="text/css" href="CSS/global.css" rel="stylesheet">
         <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     </head>
@@ -32,6 +34,7 @@
             </div>
         </header>
         <%@page import="Controller.ControlRegister" %>
+        <% Data control = Data.getInstance(); %>
         <form action="ControlRegister" method="POST">
             <section class="ja-container--b">
             <div class="ja-container--b11">
@@ -44,6 +47,10 @@
                 <div class="ja-container--b112">
                     <img src="Pictures/Imagen_10_A6_Rectangle_20_pattern.png">
                     <h2>Datos personales aspirante</h2>
+                    <% if(control.getUserStudent() != null) {%>
+                        <p class="ja-alert">* Problemas al registrar usuario, por favor vuelva a
+                            diligenciar el formulario o contactese con el administrador</p> 
+                    <%}%>
                     <div>
                     </div>
                     <div class="form">

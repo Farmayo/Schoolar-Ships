@@ -35,6 +35,8 @@ public class UserStudent implements StudentUserLocal{
             boolean flag2 = studentDAO.create(studentDTO);
             if(flag2) {
                 return true;
+            } else {
+                userDAO.delete(userDTO.getId());
             }
         }
         return false;
