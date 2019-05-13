@@ -10,76 +10,161 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" href="CSS/RegisterStyles.css" rel="stylesheet">
-        <link type="text/css" href="CSS/Footer_Header.css" rel="stylesheet">
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     </head>
-    <header>
-        <img src="Pictures/sibateLogo.png" width="100%" alt="SibateLogo">
-    </header>
     <body>
-        <section class="globalSect">
-            <form action="Login.jsp" method="post" enctype="multipart/form-data">
-                <section id="formRegister">
-                    <h2>Applicant personal data</h2>
-                    <section>
-                        <input id="loginForm" name="Name" placeholder="Name"/><label>*</label>
-                        <br><br>                    
-                        <input id="loginForm" name="Document" placeholder="Identity Document"/><label>*</label>
-                        <br>
-                        <h4>Birthdate<label>*</label></h4>
-                        <input id="loginForm" type="date "name="Date"/>
-                        <br>
-                        <label>Male</label>
-                        <input type="radio" name="sex" value="Male"/>
-                        <label>Female</label>
-                        <input type="radio" name="sex" value="Female"/>
-                        <label>*</label>
-                    </section>
-                    <br>
-                    <section>
-                        <input id="loginForm" name="LastName" placeholder="LastName"/>
-                        <br><br>                    
-                        <input id="loginForm" name="Email" placeholder="Email"/>
-                        <br><br>
-                        <input id="loginForm" name="Username" placeholder="Username"/>
-                        <br><br>
-                        <input id="loginForm" name="Password" placeholder="Password"/>
-                        <br><br>                    
-                        <input id="loginForm" name="PasswordR" placeholder="Repeat Password"/>
-                        <br>
-                    </section>
+        <header>
+            <div class="ja-container--h">
+                <div class="ja-container--h11">
+                    <img src="Pictures/Escudo-Municipio.png"
+                         alt="Logo municipio de Sibaté" title="Logo municipio de Sibaté">
+                </div>
+                <div class="col ja-container--h12">
+                    <div>
+                        <h1>Becas Mejores Bachilleres</h1>
+                        <h3>Alcald&iacute;a de Sibat&eacute;</h3>
+                    </div>
+                    <div>
+                        <img src="Pictures/baseline-collections_bookmark-24px.png" alt="bookmark" title="bookmark">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <%@page import="Controller.ControlRegister" %>
+        <form action="ControlRegister" method="POST">
+            <section class="ja-container--b">
+            <div class="ja-container--b11">
+                <div class="ja-container--b111">
+                    <a href="http://www.sibate-cundinamarca.gov.co/Paginas/default.aspx">
+                        Ir a la p&aacute;gina oficial de la alcald&iacute;a municipal de Sibat&eacute;
+                    </a>
+                    <img src="Pictures/Imagen_18_A6_Rectangle_23_pattern.png">
+                </div>
+                <div class="ja-container--b112">
+                    <img src="Pictures/Imagen_10_A6_Rectangle_20_pattern.png">
+                    <h2>Datos personales aspirante</h2>
+                    <div>
+                    </div>
+                    <div class="form">
+                        <div>
+                            <div class="ja-input-important">
+                                <input placeholder="Nombres" name="name" required=""> <p class="ja-important">*</p>
+                            </div>
+                            <div class="ja-input-important">
+                                <input placeholder="Documento de identidad" name="doc" required=""> <p class="ja-important">*</p>
+                            </div>
+                            <div class="ja-input-important">
+                                <input placeholder="Edad" name="age" type="number" required=""> <p class="ja-important">*</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ja-input-important">
+                                <input placeholder="Apellidos" name="lastname" required=""> <p class="ja-important">*</p>
+                            </div>
+                            <div class="ja-input-important">
+                                <input placeholder="Correo" name="email" type="email" required=""> <p class="ja-important">*</p>
+                            </div>
+                            <div class="ja-input-important">
+                                <input placeholder="Contraseña" name="password1" type="password" required=""> <p class="ja-important">*</p>
+                            </div>
+                            <div class="ja-input-important">
+                                <input placeholder="Confirmar Contraseña" name="password2" type="password" required=""> <p class="ja-important">*</p>
+                            </div>
+                            <div class="ja-input--doc1">
+                                <h5>
+                                    Documento de identidad aspirante
+                                </h5>
+                                <button onclick="uploadFile('ja-image--doc1')" type="button">
+                                    <img src="Pictures/baseline-cloud_upload-24px.png" id="ja-image--doc1">
+                                </button>
+                            </div>
+                            <p class="ja-file--loaded" id="ja-file--loaded"></p>
+                        </div>
+                        <span class="ja-fill--gaps">Los campos marcados con (<p class="ja-important">*</p>)son obligatorios</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ja-container--b12">
+                <h2>Archivos requeridos</h2>
+                <img src="Pictures/Imagen_9_A6_Rectangle_18_pattern.png">
+                <div>
+                    <div></div>
+                </div>
+                <div class="ja-container--b12A">
+                    <div class="ja-container--b121">
+                        <div class="ja-input--doc1">
+                            <h5>
+                                Documento de identidad aspirante
+                            </h5>
+                            <button onclick="uploadFile('ja-image--doc1')" type="button">
+                                <img src="Pictures/baseline-cloud_upload-24px.png" id="ja-image--doc1">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ja-container--b122">
+                        <div class="ja-input--doc1">
+                            <h5>
+                                Documento de identidad aspirante
+                            </h5>
+                            <button onclick="uploadFile('ja-image--doc1')" type="button">
+                                <img src="Pictures/baseline-cloud_upload-24px.png" id="ja-image--doc1">
+                            </button>
+                        </div>
+                        <div class="ja-input--doc1">
+                            <h5>
+                                Documento de identidad aspirante
+                            </h5>
+                            <button onclick="uploadFile('ja-image--doc1')" type="button">
+                                <img src="Pictures/baseline-cloud_upload-24px.png" id="ja-image--doc1">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ja-container--b123">
+                        <div class="ja-input--doc1">
+                            <h5>
+                                Documento de identidad aspirante
+                            </h5>
+                            <button onclick="uploadFile('ja-image--doc1')" type="button">
+                                <img src="Pictures/baseline-cloud_upload-24px.png" id="ja-image--doc1">
+                            </button>
+                        </div>
+                        <div class="ja-input--doc1">
+                            <h5>
+                                Documento de identidad aspirante
+                            </h5>
+                            <button onclick="uploadFile('ja-image--doc1')" type="button">
+                                <img src="Pictures/baseline-cloud_upload-24px.png" id="ja-image--doc1">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ja-container--b124">
+                        <div>
+                            <input type="radio">
+                            <label>
+                                Aceptas nuestras Condiciones, la Política de datos 
+                                y la Política de cookies. Es posible que te enviemos 
+                                notificaciones por SMS, que puedes desactivar 
+                                cuando quieras.
+                            </label>
+                        </div>
+                        <div>
+                            <button>Enviar</button>
+                            <button>Cancelar</button>
+                        </div>
+                    </div>
+                </div>
 
-                </section>
-                <section id="archivosSect">
-                    <label>Certification of Residence in the Municipality</label>
-                    <input type="file" name="certificacionAccionComunal" accept=".pdf" /><br><br>
-                    <label>Results Test Know 11</label>
-                    <input type="file" name="Icfes" accept=".pdf" /><br><br>
-                    <label>Letter of the Sisben</label>
-                    <input type="file" name="Sisben" accept=".pdf" /><br><br>
-                    <label>Degree Records</label>
-                    <input type="file" name="ActaGrado" accept=".pdf" /><br><br>
-                    <label>Degree Diploma</label>
-                    <input type="file" name="DiplomaGrado" accept=".pdf" /><br><br>
-                    <br><br>
-                    <label>Note: The files must be attached in PDF format</label>
-                    <br><br>
-                    <button id="btnRegister" value="Postular" name="Postular">Apply</button>
-                    <br><br>
-                </section>
-            </form>
-            <form action="Login.jsp">
-                <button id="btnRegister" value="Cancelar" name="Cancelar">Cancel</button>
-            </form>
+            </div>
         </section>
+        </form>
+        
+        
+        <footer>
+            
+        </footer>
+        <script src="JS/register.js">
+            
+        </script>
     </body>
-    <footer>
-        <section id="footerSect">
-            <section>Follow us on our Social Networks</section>
-            <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
-            <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
-            <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
-            <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
-            <section><a href="#">Elaborated by Didacticos CSJ</a></section>            
-        </section>
-    </footer>
 </html>

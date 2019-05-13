@@ -33,11 +33,6 @@ public class UserStudentDAO {
         UserDAO userDAO = new UserDAO();
         UserDTO out = userDAO.read(key);
         
-        StudentDAO studentDAO = new StudentDAO();
-        List<StudentDTO> students = new ArrayList<>();
-        students.add(studentDAO.read(out.getId()));
-        out.setStudens(students);
-        
         return out;
     }
 }

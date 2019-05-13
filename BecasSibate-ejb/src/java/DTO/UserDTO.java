@@ -12,8 +12,6 @@ public class UserDTO {
     
     // Store all the phones
     private List<PhoneDTO> phones;
-    // Store all the studens
-    private List<StudentDTO> studens;
 
     public UserDTO() {
     }
@@ -72,13 +70,5 @@ public class UserDTO {
 
     public void setPhones(List<PhoneDTO> phones) {
         this.phones = phones;
-    }
-
-    public List<StudentDTO> getStudens() {
-        return studens;
-    }
-
-    public void setStudens(List<StudentDTO> studens) {
-        this.studens = studens;
     }
 }

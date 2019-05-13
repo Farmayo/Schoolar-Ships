@@ -9,6 +9,7 @@ import DAO.UserDAO;
 import DTO.UserDTO;
 import DataControl.Data;
 import Interfaces.Contract;
+import Interfaces.IUser;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -26,7 +27,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ControlLogin extends HttpServlet {
 
     @EJB
-    private Contract userDAO;
+    private IUser userDAO;
     
     private HttpServletResponse res;
     private Data control;

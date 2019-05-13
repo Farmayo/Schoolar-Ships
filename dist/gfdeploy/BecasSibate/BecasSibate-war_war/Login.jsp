@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Login
-    Created on : 4/05/2019, 06:27:16 PM
-    Author     : farma
---%>
-
 <%@page import="DataControl.Data"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

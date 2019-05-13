@@ -5,6 +5,7 @@ import Interfaces.Contract;
 import java.util.List;
 
 import Connection.ConnectionDB;
+import Interfaces.IUser;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,7 +15,7 @@ import java.util.logging.Logger;
 import javax.ejb.Stateless;
 
 @Stateless
-public class UserDAO implements Contract<UserDTO> {
+public class UserDAO implements IUser {
 
     private static final String SQL_INSERT = "INSERT INTO user (User_id, name, email, url_foto, password) VALUES(?,?,?,?,?)";
     private static final String SQL_DELETE = "DELETE FROM user WHERE User_id = ?";
