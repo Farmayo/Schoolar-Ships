@@ -8,12 +8,26 @@
         <link type="text/css" href="CSS/Footer_Header.css" rel="stylesheet">
         <link type="text/css" href="CSS/global.css" rel="stylesheet">
     </head>
-    <header>
-        <img src="Pictures/sibateLogo.png" width="100%" alt="SibateLogo">
-    </header>
     <body>
+        <header>
+            <div class="ja-container--h">
+                <div class="ja-container--h11">
+                    <img src="Pictures/Escudo-Municipio.png"
+                         alt="Logo municipio de Sibaté" title="Logo municipio de Sibaté">
+                </div>
+                <div class="col ja-container--h12">
+                    <div>
+                        <h1>Becas Mejores Bachilleres</h1>
+                        <h3>Alcald&iacute;a de Sibat&eacute;</h3>
+                    </div>
+                    <div>
+                        <img src="Pictures/baseline-collections_bookmark-24px.png" alt="bookmark" title="bookmark">
+                    </div>
+                </div>
+            </div>
+        </header>
         <section class="globalSect">
-            <section id="formSect">
+            <section id="formSect" class="ja-container-l">
                 <h2>Login to Profile</h2>
                 
                 <% Data control = Data.getInstance(); %>
@@ -39,7 +53,7 @@
                     <input type="checkbox"/><a>Save Session</a> || <a href="#">Did you forget your password?</a>
                 </form>
             </section>
-            <section id="info-regSect">
+                <section id="info-regSect" class="ja-container--info">
                 <section id="infoSect">
                     <form>
                         <h2>What is the Program?</h2>
@@ -68,15 +82,15 @@
                 </section>
             </section>
         </section>
+        <footer>
+            <section id="footerSect">
+                <section>Follow us on our Social Networks</section>
+                <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
+                <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
+                <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
+                <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
+                <section><a href="#">Elaborated by Didacticos CSJ</a></section>            
+            </section>
+        </footer>
     </body>
-    <footer>
-        <section id="footerSect">
-            <section>Follow us on our Social Networks</section>
-            <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
-            <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
-            <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
-            <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
-            <section><a href="#">Elaborated by Didacticos CSJ</a></section>            
-        </section>
-    </footer>
 </html>
