@@ -7,9 +7,13 @@ package Controller;
 
 import DAO.UserDAO;
 import DTO.UserDTO;
+import DataControl.Data;
 import Interfaces.Contract;
+import Interfaces.IUser;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,27 +27,51 @@ import javax.servlet.http.HttpServletResponse;
 public class ControlLogin extends HttpServlet {
 
     @EJB
-    private Contract userDAO;
+    private IUser userDAO;
     
+    private HttpServletResponse res;
+    private Data control;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            userDAO = new UserDAO();
+            res = response;            
+            
+            userDAO = new UserDAO();            
+            control = Data.getInstance();
             
             String user = request.getParameter("username");
             String password = request.getParameter("password");
             
             try{
                 UserDTO userDTO = (UserDTO) userDAO.read(user);
-                out.write("<h1>" + userDTO.getEmail() + "</h1>");
+                
+                if (userDTO != null) {
+                    if(userDTO.getPassword().equals(password)) {
+                        response.sendRedirect("MainPage.jsp");
+                    } else {
+                        control.setTryPassword(true);
+                        redirecLogin();
+                    }
+                } else {
+                    control.setTryUser(true);
+                    redirecLogin();
+                }
+                
             }catch(Exception e) {
                 System.out.println(e.getMessage());
-                out.write("<p>" + e.toString() + "</p>");
-            }
-              
-            
+                control.setTryUser(true);
+                redirecLogin();
+            }            
+        }
+    }
+    
+    protected void redirecLogin() {
+        try {
+            res.sendRedirect("Login.jsp");
+        } catch (IOException ex) {
+            Logger.getLogger(ControlLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
