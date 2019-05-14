@@ -84,12 +84,12 @@
         </section>
         <footer>
             <section id="footerSect">
-                <section>Follow us on our Social Networks</section>
+                <section>Siguenos en Nuestras Redes Sociales</section>
                 <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
                 <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
                 <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
                 <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
-                <section><a href="#">Elaborated by Didacticos CSJ</a></section>            
+                <section><a href="#">Desarrollado por Didacticos CSJ</a></section>            
             </section>
         </footer>
     </body>
