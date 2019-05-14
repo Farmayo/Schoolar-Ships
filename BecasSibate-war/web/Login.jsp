@@ -26,37 +26,52 @@
                 </div>
             </div>
         </header>
+        <a href="http://www.sibate-cundinamarca.gov.co/Paginas/default.aspx">
+            Ir a la p&aacute;gina oficial de la alcald&iacute;a municipal de Sibat&eacute;
+        </a>
         <section class="globalSect">
             <section id="formSect" class="ja-container-l">
-                <h2>Login to Profile</h2>
-                
+                <div>
+                    <img src="Pictures/baseline-how_to_reg-24px.png">
+                </div>
+                <h2>Ingresar a perfil</h2>
+
                 <% Data control = Data.getInstance(); %>
-                
-                <%if(control.isTryUser()) { %> 
-                    <p class="ja-alert">* Usuario no encontrado</p> 
-                    <%  control.setTryUser(false); } %>
-                <%if(control.isTryPassword()) { %>
-                    <p class="ja-alert">* Contras&ntilde;a incorrecta</p>
-                    <%  control.setTryPassword(false); } %>
+
+                <%if (control.isTryUser()) { %> 
+                <p class="ja-alert">* Usuario no encontrado</p> 
+                <%  control.setTryUser(false);
+                        } %>
+                <%if (control.isTryPassword()) { %>
+                <p class="ja-alert">* Contras&ntilde;a incorrecta</p>
+                <%  control.setTryPassword(false);
+                        }%>
                 <%@page import="Controller.ControlLogin" %>
-                <form action="ControlLogin">
-                    <p>Identity Document</p>
-                    <img src="Pictures/IconUserLogin.png">
-                    <input id="loginForm" name="username" placeholder="Enter our Identity Document"/>
-                    <br>
-                    <p>Password</p>
-                    <img src="Pictures/IconPassLogin.png">
-                    <input type="password" id="loginForm" name="password" placeholder="Enter your Password"/>
+                <form action="ControlLogin" class="ja-container-lf">
+                    <div class="ja-container-lf1">
+                        <p>Documento de identidad</p>
+                        <div>
+                            <div><img src="Pictures/baseline-assignment_ind-24px.png"></div>
+                            <input name="username" placeholder="Enter our Identity Document"/>
+                        </div>
+                    </div>
+                    <div class="ja-container-lf1">
+                        <p>Password</p>
+                        <div>
+                            <div><img src="Pictures/baseline-vpn_key-24px.png"></div>
+                            <input type="password" name="password" placeholder="Enter your Password"/>
+                        </div>
+                    </div>
+
+                    <button id="btnLogin" class="ja-container--btnlogin" value="Enter" name="Enter">Ingresar</button>
                     <br><br>
-                    <button id="btnLogin" value="Enter" name="Enter">Enter</button>
-                    <br><br>
-                    <input type="checkbox"/><a>Save Session</a> || <a href="#">Did you forget your password?</a>
+                    <input type="checkbox"/><a>Guardar sesión</a> || <a href="#">¿Olvidaste la contrase&ntilde;a</a>
                 </form>
             </section>
-                <section id="info-regSect" class="ja-container--info">
+            <section id="info-regSect" class="ja-container--info">
                 <section id="infoSect">
                     <form>
-                        <h2>What is the Program?</h2>
+                        <h2>En que consiste el programa</h2>
                         <p>
                             The best baccalaureate program consists in granting the academic benefit annually to the
                             twenty (20) best students of the municipality of Sibaté, who have completed the eleventh grade (11)
@@ -65,32 +80,52 @@
                             university education at undergraduate level in a university located in the territory
                             National.
                         </p>
-                        <button id="btnInfo" value="SolicitarInfo" name="SolicitarInfo">Ask for information</button>
+                        <button id="btnInfo1" class="ja-container--btnlogin" 
+                                name="SolicitarInfo" disabled>Solicitar informaci&oacute;n</button>
                     </form>
                 </section>
-                <section id="regSect">
+                <section class="ja-container-lr">
                     <form action="Register.jsp">
                         <h2>Requirements</h2>
-                        <p> To apply for one of these scholarships you must submit the following documents: </ p>
-                        <p> Identity Document </ p>
-                        <p> Certification Board of Community Action </ p>
-                        <p> Result test of state Know 11 </ p>
-                        <p> Grade Certificate </ p>
-                        <p> Diploma of degree </ p>
-                            <button id="btnInfo" value="Postular" name="Postular">Apply</button>
+                        <p> To apply for one of these scholarships you must submit the following documents: </p>
+                        <p> Identity Document </p>
+                        <p> Certification Board of Community Action </p>
+                        <p> Result test of state Know 11 </p>
+                        <p> Grade Certificate </p>
+                        <p> Diploma of degree </p>
+                        <button type="submit" id="btnInfo" class="ja-container--btnlogin" name="Postular">Aplicar</button>
                     </form>
                 </section>
             </section>
         </section>
         <footer>
-            <section id="footerSect">
-                <section>Siguenos en Nuestras Redes Sociales</section>
-                <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
-                <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
-                <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
-                <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
-                <section><a href="#">Desarrollado por Didacticos CSJ</a></section>            
-            </section>
+            <div>Siguenos en nuestras </div>
+            <div>
+                <button>
+                    Instagram
+                    <img src="Pictures/instagramLogo.png">
+                </button>
+            </div>
+            <div>
+                <button>
+                    Facebook <img src="Pictures/facebookLogo.png">
+                </button>
+            </div>
+            <div>
+                <button>
+                    Twitter
+                    <img src="Pictures/twitterLogo.png">
+                </button>
+            </div>
+            <div>
+                <button>
+                    YouTube
+                    <img src="Pictures/youtubeLogo.png">
+                </button>
+            </div>
+            <div>
+                <strong>Elaborated by Didacticos CSJ</strong>
+            </div>   
         </footer>
     </body>
 </html>
