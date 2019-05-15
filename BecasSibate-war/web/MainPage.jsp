@@ -20,16 +20,12 @@
                     <label>Alcaldia de Sibat&eacute;</label>
                 </section>
                 <section id="sect1-3">
-                    <section>
                         <form>
-                            <button class="icons"><img src="Pictures/Configuracion.png"></button>
+                            <button class="icons"><img src="Pictures/xdConfig2.png"></button>
                         </form>
-                    </section>
-                    <section>
                         <form>
-                            <button class="icons" id="btnExit"><img src="Pictures/IconExitWhite.png"></button>
+                            <button class="icons" id="btnExit"><img src="Pictures/xdExit.png"></button>
                         </form>
-                    </section>
                 </section>
             </section>
 
