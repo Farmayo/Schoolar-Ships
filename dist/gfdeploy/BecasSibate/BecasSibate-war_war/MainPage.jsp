@@ -17,23 +17,18 @@
         <section id="globalSect">
             <section id="sect1">
                 <section id="sect1-1">
-                    <label>Sibat&eacute; City Hall</label>
-                </section>
-                <section id="sect1-2">
-                    <form>
-                        <input type="search" placeholder="Search"/>
-                        <input type="submit" value="&#10140;"/>
-                    </form>
+                    <label>Alcaldia de Sibat&eacute;</label>
                 </section>
                 <section id="sect1-3">
                     <section>
-                        <a id="icons" href="#"><img src="Pictures/Notificaciones.png"></a>
+                        <form>
+                            <button class="icons"><img src="Pictures/Configuracion.png"></button>
+                        </form>
                     </section>
                     <section>
-                        <a id="icons" href="Settings.jsp"><img src="Pictures/Configuracion.png"></a>
-                    </section>
-                    <section>
-                        <a id="icons" href="Login.jsp"><img src="Pictures/IconExitWhite.png"></a>
+                        <form>
+                            <button class="icons" id="btnExit"><img src="Pictures/IconExitWhite.png"></button>
+                        </form>
                     </section>
                 </section>
             </section>
@@ -41,65 +36,73 @@
             <section id="sect2">
                 <section id="sect2-1">
                     <section id="sect2-11">
-                        <img id="imgUser" src="Pictures/IconUserLogin.png">
-                        <h4 id="textInfo">Full Name</h4>
-                        <h5 id="textInfo">Career</h5>
-                        <h6 id="textInfo">ECCI University</h6>
+                        <img class="imgUser" src="Pictures/IconUserLogin.png">
+                        <h4 class="textInfo">Nombre Completo</h4>
+                        <h5 class="textInfo">Carrera</h5>
+                        <h6 class="textInfo">Universidad ECCI</h6>
                     </section>
                     <section id="sect2-12">
-                        <a href="#">Update Information</a>
-                        </br></br>
-                        <a href="#">Update Files</a>
-                        </br></br>
-                        <a href="Settings.jsp">Settings</a>
+                        <form>
+                            <button class="btnProfile">Actualizar Informaci&oacute;n</button>
+                        </form>
+                        <form>
+                            <button class="btnProfile">Subir Archivos</button>
+                        </form>
+                        <form action="Settings.jsp">
+                            <button class="btnProfile">Configuraci&oacute;n</button>
+                        </form>
                     </section>
                 </section>
 
                 <section id="sect2-2">
                     <section id="sect2-21">
-                        <section>
+                        <section id="sect2-2111">
                             <label>INFO</label>
-                            <br>
-                            <label>__________________________</label>
                         </section>
                         <section id="sect2-211">
                             <section>
-                                <a>Semestres</a>
+                                <form>
+                                    <button>Semestres</button>
+                                </form>
                             </section>
                             <section>
-                                <a>Solicitudes Comite Tecnico</a>
+                                <form>
+                                    <button>Solicitudes Comite Tecnico</button>
+                                </form>
                             </section>
                             <section>
-                                <a>Cuentas de Cobro</a>
+                                <form>
+                                    <button>Cuentas de Cobro</button>
+                                </form>
                             </section>
+                        </section>
+                        <section id="sect2-212">
+                            <section>
+                                <form>
+                                    <button>Solicitudes Comit&eacute; Tecnico</button>
+                                </form>
+                            </section>
+                        </section>
+                        <section id="sect2-213">
+                            HOLA
                         </section>
                     </section>
                     <section id="sect2-22">
-                        <section id="sect2-221">
-                            <label>Semestre Actual</label>
-                        </section>
-                        <section id="sect2-222">
-                            <section id="sect2-223">
-                                <label>Informacion</label>
-                            </section>
-                            <section id="sect2-224">
-                                <h4>Solicitudes en Proceso</h4>
-                                <label>Information</label>
-                            </section>
-                        </section>
+
                     </section>
                 </section>
             </section>
         </section>
+        <footer>
+            <section id="footerSect">
+                <section>Siguenos en Nuestras Redes Sociales</section>
+                <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
+                <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
+                <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
+                <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
+                <section><a href="#">Desarrollado por Didacticos CSJ</a></section>            
+            </section>
+        </footer>
     </body>
-    <footer>
-        <section id="footerSect">
-            <section>Follow us on our Social Networks</section>
-            <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
-            <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
-            <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
-            <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
-            <section><a href="#">Elaborated by Didacticos CSJ</a></section>            
-        </section>
-    </footer>
+
 </html>

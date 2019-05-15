@@ -1,37 +1,73 @@
 #sectSettings1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    position: relative;
-    display: flex;
+    width: 80%;
+    margin: 10px 10px 10px 0px;
     border: black 1px solid;
-    border-radius: 10px;
 }
 
 #sectSettings1-1 {
+    margin: 10px;
+    border: black 1px solid;
+    border-radius: 10px;
     display: block;
-    position: relative;
-    border: black 1px solid;
-    border-radius: 10px;
+}
+
+#sectSettings1-11 {
+    text-align: center;
+    display: block;
+}
+
+#sectSettings1-12 {
+    display: block;
     text-align: center;
     margin: 10px auto;
 }
 
-#sectSettings1-1 section {
-    display: grid;
-    position: relative;
+#sectSettings1-121 {
+    display: block;
 }
 
-#sectSettings1-2 {
+#sectSettings1-122 section{
+    display: inline-block;
+    margin: 40px;
+}
+
+#sectSettings2 {
+    margin: 10px;
     border: black 1px solid;
     border-radius: 10px;
-    margin: 10px auto;    
+    display: block;
+}
+#sectSettings2 button{
+    margin: 10px;
+    border-radius: 10px;
+    display: block;
+    height: 30px;
+}
+
+#sectSettings2-1 {
+    display: block;
+}
+
+#sectSettings2-11 {
+    display: block;
     text-align: center;
 }
 
-#sectSettings1-3 {
-    border: black 1px solid;
-    border-radius: 10px;
-    margin: 10px auto;
-    text-align: center;
+#sectSettings2-12 {
+    margin: 50px;
+    display: flex;
 }
+
+.sectSettings2-121 input {
+    text-align: center;
+    margin: 30px;
+    display: block;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+}
+
+.sectSettings2-121 form {
+    margin: 10px;
+}
+
