@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <div class="ja-container-lf1">
-                        <p>Password</p>
+                        <p>Contrase&ntilde;a</p>
                         <div>
                             <div><img src="Pictures/baseline-vpn_key-24px.png"></div>
                             <input type="password" name="password" placeholder="Enter your Password"/>
@@ -102,24 +102,25 @@
             <div>Siguenos en nuestras </div>
             <div>
                 <button>
-                    Instagram
+                    <label>Instagram</label>
                     <img src="Pictures/instagramLogo.png">
                 </button>
             </div>
             <div>
                 <button>
-                    Facebook <img src="Pictures/facebookLogo.png">
+                    <label>Facebook</label>
+                    <img src="Pictures/facebookLogo.png">
                 </button>
             </div>
             <div>
                 <button>
-                    Twitter
+                    <label>Twitter</label>
                     <img src="Pictures/twitterLogo.png">
                 </button>
             </div>
             <div>
                 <button>
-                    YouTube
+                    <label>YouTube</label>
                     <img src="Pictures/youtubeLogo.png">
                 </button>
             </div>

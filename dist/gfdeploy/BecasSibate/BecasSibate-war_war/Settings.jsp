@@ -18,23 +18,18 @@
         <section id="globalSect">
             <section id="sect1">
                 <section id="sect1-1">
-                    <label>Sibat&eacute; City Hall</label>
-                </section>
-                <section id="sect1-2">
-                    <form>
-                        <input type="search" placeholder="Search"/>
-                        <input type="submit" value="&#10140;"/>
-                    </form>
+                    <label>Alcaldia de Sibat&eacute;</label>
                 </section>
                 <section id="sect1-3">
                     <section>
-                        <a id="icons" href="#"><img src="Pictures/Notificaciones.png"></a>
+                        <form>
+                            <button class="icons"><img src="Pictures/Configuracion.png"></button>
+                        </form>
                     </section>
                     <section>
-                        <a id="icons" href="Settings.jsp"><img src="Pictures/Configuracion.png"></a>
-                    </section>
-                    <section>
-                        <a id="icons" href="Login.jsp"><img src="Pictures/IconExitWhite.png"></a>
+                        <form>
+                            <button class="icons" id="btnExit"><img src="Pictures/IconExitWhite.png"></button>
+                        </form>
                     </section>
                 </section>
             </section>
@@ -42,75 +37,139 @@
             <section id="sect2">
                 <section id="sect2-1">
                     <section id="sect2-11">
-                        <img id="imgUser" src="Pictures/IconUserLogin.png">
-                        <h4 id="textInfo">Full Name</h4>
-                        <h5 id="textInfo">Career</h5>
-                        <h6 id="textInfo">ECCI University</h6>
+                        <img class="imgUser" src="Pictures/IconUserLogin.png">
+                        <h4 class="textInfo">Nombre Completo</h4>
+                        <h5 class="textInfo">Carrera</h5>
+                        <h6 class="textInfo">Universidad ECCI</h6>
                     </section>
                     <section id="sect2-12">
-                        <a href="#">Update Information</a>
-                        </br></br>
-                        <a href="#">Update Files</a>
-                        </br></br>
-                        <a href="#">Settings</a>
+                        <form>
+                            <button class="btnProfile">Actualizar Informaci&oacute;n</button>
+                        </form>
+                        <form>
+                            <button class="btnProfile">Subir Archivos</button>
+                        </form>
+                        <form action="Settings.jsp">
+                            <button class="btnProfile">Configuraci&oacute;n</button>
+                        </form>
                     </section>
                 </section>
 
                 <section id="sectSettings1">
                     <section id="sectSettings1-1">
-                        <h2>Change Profile Picture</h2>
-                        
-                        <section>
-                            <img id="imgUser" src="Pictures/IconUserLogin.png">
+                        <section id="sectSettings1-11">
+                            <h2>Cambiar Foto de Perfil</h2>
                         </section>
-                        <section>
-                            <a id="icons"><img src="Pictures/deleteIcon.png"></a>
-                            <h4>Delete</h4>
+                        <section id="sectSettings1-12">
+                            <section id="sectSettings1-121">
+                                <section>
+                                    <img class="imgUser" src="Pictures/IconUserLogin.png">
+                                </section>
+                            </section>
+                            <section id="sectSettings1-122">
+                                <section>
+                                    <form>
+                                        <button class="icons"><img src="Pictures/deleteIcon.png"></button>
+                                    </form>
+                                    <h4>Borrar</h4>
+                                </section>
+                                <section>
+                                    <form>
+                                        <button class="icons"><img src="Pictures/uploadFiles.png"></button>
+                                    </form>
+                                    <h4>Cargar desde el Computador</h4>
+                                </section>
+                                <section>
+                                    <form>
+                                        <button class="icons"><img src="Pictures/uploadURL.png"></button>
+                                    </form>
+                                    <h4>Cargar desde una URL</h4>
+                                </section>   
+                            </section>
                         </section>
-                        <section>
-                            <a id="icons"><img src="Pictures/uploadFiles.png"></a>
-                            <h4>Upload from Computer</h4>
-                        </section>
-                        <section>
-                             <a id="icons"><img src="Pictures/uploadURL.png"></a>
-                             <h4>Upload from URL</h4>
-                        </section>          
-                        
-                    </section>
-                    <section id="sectSettings1-2">
-                        <h2>Privacity</h2>
-                        <section>
-                            <form action="#">
-                                <h3>Change Username</h3>
-                                <input type="text" name="Username" placeholder="New Username" />
-                                <h3>Change Password</h3>
-                                <input type="text" name="Password" placeholder="Current Password" />
-                                <input type="text" name="NewPassword" placeholder="New Password" />
-                                <input type="text" name="NewPasswordR" placeholder="Repeat New Password" />
-                                </br></br>
-                                <button>Confirm Changes</button>
-                                <button>Cancel</button>
-                            </form>
-                        </section>
-                    </section>
-                    <section id="sectSettings1-3">
-                        <h2>Documents</h2>
                     </section>
 
+                    <section id="sectSettings2">
+                        <section id="sectSettings2-1">
+                            <section id="sectSettings2-11">
+                                <h2>Privacidad</h2>
+                            </section>
+                            <section id="sectSettings2-12">
+
+                                <section class="sectSettings2-121">
+                                    <form action="#">
+                                        <h3>Cambiar Contraseña</h3>
+                                        <input type="text" name="Password" placeholder="Contraseña Actual" />
+                                        <input type="text" name="NewPassword" placeholder="Contraseña Nueva" />
+                                        <input type="text" name="NewPasswordR" placeholder="Repetir Contraseña Nueva" />
+                                        <button>Confirmar Cambios</button>
+                                        <button>Cancelar</button>
+                                    </form>
+                                </section>
+
+                                <section class="sectSettings2-121">
+                                    <form>
+                                        <h3>Numero de Telefono</h3>
+                                        <input type="text" name="Telephone" placeholder="##" />
+                                        <!-- Colocar boton para editar el numero actual  -->
+                                        <h3>Correo Electronico</h3>
+                                        <input type="text" name="Telephone" placeholder="##" />
+                                        <button>Confirmar</button>
+                                    </form>
+                                </section>
+
+                                <section class="sectSettings2-121">
+                                    <form>
+                                        <h3>Carreras</h3>
+                                        <input type="text" name="Career" placeholder="##" Disabled/>
+                                        <!-- Colocar boton para editar el numero actual  -->
+                                        <button>Confirmar</button>
+                                    </form>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+
+
+                    <section id="sectSettings3">
+                        <section id="sectSettings3-1">
+                            <section id="sectSettings3-11">
+                                <h2>Privacidad</h2>
+                            </section>
+                            <section id="sectSettings3-12">
+                                <form action="#">
+                                    <section id="sectSettings3-121">
+                                        <h3>Cambiar Nombre de Usuario</h3>
+                                        <input type="text" name="Username" placeholder="Nuevo Nombre de Usuario" />
+                                        <h3>Cambiar Contraseña</h3>
+                                        <input type="text" name="Password" placeholder="Contraseña Actual" />
+                                        <input type="text" name="NewPassword" placeholder="Contraseña Nueva" />
+                                        <input type="text" name="NewPasswordR" placeholder="Repetir Contraseña Nueva" />
+                                        <button>Confirmar Cambios</button>
+                                        <button>Cancelar</button>
+                                    </section>
+                                    <section id="sectSettings3-122">
+                                        <h3>Cambiar Numero de Telefono</h3>
+
+
+                                    </section>
+                                </form>
+                            </section>
+                        </section>
+                    </section>
                 </section>
-
-
             </section>
         </section>
+        <footer>
+            <section id="footerSect">
+                <section>Siguenos en Nuestras Redes Sociales</section>
+                <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
+                <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
+                <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
+                <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
+                <section><a href="#">Desarrollado por Didacticos CSJ</a></section>            
+            </section>
+        </footer>
     </body>
-    <footer>
-        <section id="footerSect">
-            <section>Follow us on our Social Networks</section>
-            <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
-            <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
-            <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
-            <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
-            <section><a href="#">Elaborated by Didacticos CSJ</a></section>            
-        </section>
-    </footer>
+
 </html>

@@ -165,10 +165,16 @@
             </div>
         </section>
         </form>
-        
-        
+                
         <footer>
-            
+            <section id="footerSect">
+                <section>Siguenos en Nuestras Redes Sociales</section>
+                <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
+                <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
+                <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
+                <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
+                <section><a href="#">Desarrollado por Didacticos CSJ</a></section>            
+            </section>
         </footer>
         <script src="JS/register.js">
             
