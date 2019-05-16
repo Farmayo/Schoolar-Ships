@@ -4,6 +4,13 @@
     height: 100%;
 }
 
+#titulo {
+    color: #D1D1D1;
+    font-family: arial;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .imgUser{
     width: 100px;
     height: 100px;
@@ -21,12 +28,30 @@
 
 #btnExit {
     background: #B70914;
-    border-top-right-radius: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-color: gray;
+}
+
+#btnSettings {
+    background: white;
 }
 
 .btnProfile {
     width: 100%;
     height: 45px;
+    background: #97050E;
+    border-style: none;
+    margin-top: 0.5%;
+    color: #C58B8F;
+    
+}
+
+.btnProfile img {
+    margin-right: 10px;
+    margin-left: 30px;
+    text-align: end;
+    
 }
 
 label {
@@ -41,13 +66,17 @@ label {
     display: grid;
     grid-template-columns: 9fr 1fr;
     background: white;
-    border: black 1px solid;
+    border: black 2px solid;
     border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: gray;
 }
 
 #sect1 #sect1-1 {
     text-align: center;
     padding: 10px 0 0 0;
+    border-right: 2px gray solid;
+    
 }
 
 #sect1 #sect1-3 {
@@ -68,8 +97,8 @@ label {
 }
 
 #sect2{
-    display: flex;
-    border: black 1px solid;
+    display: flex;    
+    background: #F5F5F5;
 }
 
 #sect2-1 {
@@ -77,60 +106,151 @@ label {
     height: 552px;
     border: 1px black solid;
     background: #B70914;
+    position: relative;
 }
 
 #sect2-1 section{
     display: block;
 }
 
+#sect2-1 div {
+    background: #97050E;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+}
+
+#sect2-1 div p {
+    color: #C58B8F;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 12.5px;
+} 
+
 #sect2-11 {
     height: 50%;
     margin: 0 30px auto;
 }
 
-
-#sect2-12 {
-    
-}
-
 #sect2-2 {
     width: 80%;
     margin: 10px 10px 10px 10px;
-    border: 1px black solid;
 }
 
-#sect2-2111 {
-    margin: 30px;
-    padding-bottom: 10px;
-    border-bottom: 1px black solid;
-    
+#sect2-21 {
+    display: block;
 }
 
 #sect2-211 {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px black solid;
+    border-color: #97050E;  
 }
 
-#sect2-211 section{
-    display: inline-block;
+#sect2-212 {
+    width: 100%;
 }
 
-#sect2-211 section form button {
-    margin: 10px 0px 20px 30px;
-    font-size: 20px;
-    height: 60px;
+.btnSelector{
+    text-align: center;
+    font-family: arial;
+    width: 100%;
+    height: 5%;
+    display: grid;
+    margin-bottom: 15px;
+}
+
+.btnSelector form button {
+}
+
+.informacion {
+    margin: 10px;
+    border: 1px transparent solid;
+    text-align: center;
+    font-family: arial;
     
 }
 
-#sect2-212 section form button {
-    margin: 10px 0px 20px 35%;
-    font-size: 20px;
-    height: 60px;
-    
+.informacion section {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #B70914;
+    width: 100%;
+    height: 5%;
+    display: grid;
+    grid-template-columns: 18fr 1fr;
 }
 
-#sect2-213 {
-    margin: 20px;
-    height: 50px;
-    border: 1px black solid;
+.informacion section button {
+    background: #B70914;
+    border: none;
+    border-top-right-radius: 10px;
+}
+
+.informacion div {
+    height: 300px;
+    border: 1px gray solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.informacion div h1 {
+    font-size: 30px;
+    font-style: oblique;
+}
+
+.botones {
+    border-radius: 10px;
+    border-color: #E5E5E5;
+    background: white;
+    height: 70px;
+    font-size: 25px;
+    font-family: arial;
+    margin: 0 10px 5px 10px ;
+    padding: 0 20px 0 20px;
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
+    column-gap: 5px;
+    margin: 1% 3% auto;
+}
+
+footer > div:first-of-type,
+footer > div:last-of-type{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+}
+
+footer > div {
+    background: #BFBFBF;
+}
+
+footer > div button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    border-style: none;
+    padding: 5px;
+}
+
+footer > div button label {
+    margin: 0 10px 0 0;
+}
+
+footer > div button img {
+    width: 24px;
+}
+
+footer > div button:hover{
+    background: #D6D6D6;
 }

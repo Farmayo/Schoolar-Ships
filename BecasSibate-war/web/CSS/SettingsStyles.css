@@ -1,7 +1,5 @@
 #sectSettings1 {
     width: 80%;
-    margin: 10px 10px 10px 0px;
-    border: black 1px solid;
 }
 
 #sectSettings1-1 {
@@ -31,23 +29,6 @@
     margin: 40px;
 }
 
-#sectSettings2 {
-    margin: 10px;
-    border: black 1px solid;
-    border-radius: 10px;
-    display: block;
-}
-#sectSettings2 button{
-    margin: 10px;
-    border-radius: 10px;
-    display: block;
-    height: 30px;
-}
-
-#sectSettings2-1 {
-    display: block;
-}
-
 #sectSettings2-11 {
     display: block;
     text-align: center;
@@ -71,3 +52,27 @@
     margin: 10px;
 }
 
+.informacion2 {
+    margin: 10px;
+    border: 1px gray solid;
+    text-align: center;
+    font-family: arial;
+    border-radius: 10px;       
+}
+
+.informacion2 #sectSet1 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #B70914;
+    width: 100%;
+    height: 5%;
+    display: grid;
+    grid-template-columns: 18fr 1fr;
+    
+}
+
+.informacion2 #sectSet1 button {
+    background: #B70914;
+    border: none;
+    border-top-right-radius: 10px;
+}
