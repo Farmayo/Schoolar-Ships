@@ -96,7 +96,7 @@ public class UserDAO implements IUser {
 
             rs = ps.executeQuery();
             while (rs.next()) {
-                user = new UserDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(5), rs.getString(4));
+                user = new UserDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(5), rs.getString(4), rs.getString(6));
             }
             return user;
         } catch (SQLException ex) {
@@ -118,7 +118,7 @@ public class UserDAO implements IUser {
             
             rs = ps.executeQuery();
             while(rs.next()) {
-                users.add(new UserDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(5), rs.getString(4)));
+                users.add(new UserDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(5), rs.getString(4), rs.getString(5)));
             }
             return users;
         } catch (SQLException ex) {

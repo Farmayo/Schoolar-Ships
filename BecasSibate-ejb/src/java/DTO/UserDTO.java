@@ -9,6 +9,7 @@ public class UserDTO {
     private String email;
     private String password;
     private String url_photo;
+    private String rol;
     
     // Store all the phones
     private List<PhoneDTO> phones;
@@ -16,12 +17,13 @@ public class UserDTO {
     public UserDTO() {
     }
 
-    public UserDTO(String id, String name, String email, String password, String url_photo) {
+    public UserDTO(String id, String name, String email, String password, String url_photo, String rol) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.url_photo = url_photo;
+        this.rol = rol;
     }
 
     public String getId() {
@@ -62,6 +64,14 @@ public class UserDTO {
 
     public void setUrl_photo(String url_photo) {
         this.url_photo = url_photo;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
     public List<PhoneDTO> getPhones() {
