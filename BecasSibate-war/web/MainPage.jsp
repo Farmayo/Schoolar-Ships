@@ -55,15 +55,15 @@
                         </section>
                         <section id="sect2-212">
                             <div class="btnSelector">
-                                <form>
-                                    <button class="botones" id="btn1">Semestre Actual</button>
-                                    <button class="botones" id="btn2">Semestres</button>
-                                    <button class="botones" id="btn3">Cuentas de Cobro</button>
-                                    <button class="botones" id="btn4" style="display:none" type="button" onclick="mostrar()">
+                                <form id="menuForm">
+                                    <button class="botones" id="btn1" onclick="Mostrar('infoMain1')">Semestre Actual</button>
+                                    <button class="botones" id="btn2" onclick="Mostrar('infoMain2')">Semestres</button>
+                                    <button class="botones" id="btn3" onclick="Mostrar('infoMain3')">Cuentas de Cobro</button>
+                                    <button class="botones" id="btn4" onclick="Mostrar('infoMain4')" type="button" onclick="mostrar()">
                                         Solicitudes Comit&eacute; Tecnico</button>
                                 </form>
                             </div>
-                            <div class="informacion" id="infoMain1">
+                            <div class="informacion" id="infoMain1" style="display:none">
                                 <section>
                                     <h3>Semestre Actual</h3>
                                     <button><img src="Pictures/xdArrowMenu.png"></button>
@@ -139,6 +139,9 @@
         </footer>
 
         <script src="JS/register.js">
+
+        </script>
+        <script src="JS/MainPage.js">
 
         </script>
     </body>

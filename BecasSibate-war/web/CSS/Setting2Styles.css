@@ -1,0 +1,101 @@
+#setSect1 {
+    width: 100%;
+    margin: 10px;
+    display: block;
+    border: 1px black solid;
+}
+
+#setSect1-1 {
+    margin: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px black solid;
+    border-color: #97050E;
+}
+
+#setSect1-2 {
+    width: 100%;
+}
+
+.informacion2 {
+    margin: 10px;
+    border: 1px transparent solid;
+    text-align: center;
+    font-family: arial;
+
+}
+
+.informacion2 #infoSet1-1 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #B70914;
+    width: 100%;
+    height: 5%;
+    display: grid;
+    grid-template-columns: 18fr 1fr;
+}
+
+.informacion2 #infoSet1-1 button {
+    background: #B70914;
+    border: none;
+    border-top-right-radius: 10px;
+}
+
+.informacion2 #infoSet1-2 {
+    border: 1px gray solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+}
+
+#infoSet1-21 section{
+    width: 100%;
+    height: 5%;;
+    display: block;
+}
+
+#infoSet1-212 section{
+    margin: 10px auto;
+    width: 100%;
+    height: 5%;
+    display: grid;
+}
+
+.btnPrivacidad {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 60px;
+    background: #B70914;
+    border: none;
+    padding: 12px 0 12px 0;
+    color: white;
+}
+
+.btnCancelar{
+    border-radius: 8px;
+    width: 60px;
+    background: #B70914;
+    border: none;
+    padding: 12px 0 12px 0;
+    margin-bottom: 10px;
+}
+
+.infoPrivacidad section form {
+    height: 5%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: gray;
+    margin: 10px auto;
+}
+
+.infoPrivacidad section form input {
+    text-align: center;
+    padding: 10px 0 10px 0;
+    right: 0px;
+}
+
+
+.infoPrivacidad section form input:first-of-type {
+    padding: 10px 0 10px 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

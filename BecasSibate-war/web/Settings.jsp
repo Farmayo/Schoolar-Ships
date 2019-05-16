@@ -87,7 +87,8 @@
                                         <section id="sectSettings1-122">
                                             <section>
                                                 <form>
-                                                    <button class="icons" onclick="uploadFile('ja-image--doc1')" type="button"><img src="Pictures/xdDelete.png"></button>
+                                                    <button class="icons" onclick="uploadFile('ja-image--doc1')" type="button">
+                                                        <img src="Pictures/xdDelete.png"></button>
                                                 </form>
                                                 <h4>Borrar</h4>
                                             </section>
