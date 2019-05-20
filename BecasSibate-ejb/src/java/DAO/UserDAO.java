@@ -19,7 +19,7 @@ public class UserDAO implements IUser {
 
     private static final String SQL_INSERT = "INSERT INTO user (User_id, name, email, url_foto, password) VALUES(?,?,?,?,?)";
     private static final String SQL_DELETE = "DELETE FROM user WHERE User_id = ?";
-    private static final String SQL_UPDATE = "UPDATE user SET name = ?, email = ?, url_foto = ?, password = ? WHERE User_id = ?";
+    private static final String SQL_UPDATE = "UPDATE user SET name = ?, password = ?, email = ?, rol = ? WHERE User_id = ?";
     private static final String SQL_READ = "SELECT * FROM user WHERE User_id = ?";
     private static final String SQL_READALL = "SELECT * FROM user";
     
@@ -31,8 +31,8 @@ public class UserDAO implements IUser {
         try {
             ps = conn.getConnection().prepareStatement(SQL_INSERT);
             ps.setString(1, in.getId());
-            ps.setString(2, in.getEmail());
-            ps.setString(3, in.getName());
+            ps.setString(2, in.getName());
+            ps.setString(3, in.getEmail());
             ps.setString(4, in.getUrl_photo());
             ps.setString(5, in.getPassword());
             
@@ -69,9 +69,9 @@ public class UserDAO implements IUser {
         try {
             ps = conn.getConnection().prepareStatement(SQL_UPDATE);
             ps.setString(1, in.getName());
-            ps.setString(2, in.getEmail());
-            ps.setString(3, in.getUrl_photo());
-            ps.setString(4, in.getPassword());
+            ps.setString(2, in.getPassword());
+            ps.setString(3, in.getEmail());
+            ps.setString(4, in.getRol());
             ps.setString(5, in.getId());
             
             if (ps.executeUpdate() > 0) { return true; }
@@ -96,7 +96,7 @@ public class UserDAO implements IUser {
 
             rs = ps.executeQuery();
             while (rs.next()) {
-                user = new UserDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(5), rs.getString(4), rs.getString(6));
+                user = new UserDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
             }
             return user;
         } catch (SQLException ex) {
@@ -118,7 +118,7 @@ public class UserDAO implements IUser {
             
             rs = ps.executeQuery();
             while(rs.next()) {
-                users.add(new UserDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(5), rs.getString(4), rs.getString(5)));
+                users.add(new UserDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
             }
             return users;
         } catch (SQLException ex) {

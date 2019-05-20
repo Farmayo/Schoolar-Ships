@@ -1,8 +1,3 @@
-<%-- 
-    Document   : Manage
-    Created on : May 15, 2019, 4:30:44 PM
-    Author     : JAIRJAP
---%>
 
 <%@page import="DataControl.ManageData"%>
 <%@page import="DataControl.Data"%>
@@ -12,11 +7,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" href="CSS/Manage.css" rel="stylesheet">
+        <link type="text/css" href="CSS/global.css" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
               integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <title>Administrador</title>
     </head>
-    <body>
+    <body onload="buttonMenu(0)">
         <%
             Data control = Data.getInstance();
             ManageData manage = ManageData.getInstance();
@@ -27,10 +23,13 @@
                 <h2>Alcald&iacute;a de Sibat&eacute;</h2>
             </div>
             <div>
-                <button>
-                    Salir
-                    <img src="Pictures/xdExit.png">
-                </button>
+                <%@page import="Controller.ControlExit" %>
+                <form action="ControlExit">
+                    <button>
+                        Salir
+                        <img src="Pictures/xdExit.png">
+                    </button>
+                </form>
             </div>
         </header>
         <section class="ja-container-body">
@@ -42,25 +41,25 @@
                 </div>
 
                 <div>
-                    <button class="selected">Administrar</button>
-                    <button>Enviar informaci&oacute;n</button>
-                    <button>Editar perfil</button>
+                    <button onclick="buttonMenu(0)" id="ja-tables-0">Administrar</button>
+                    <button onclick="buttonMenu(1)" id="ja-tables-1">Enviar informaci&oacute;n</button>
                 </div>
             </div>
-            <div>
+            <div class="ja-tables">
                 <h2>Edici&oacute;n de usuarios</h2>
                 <div class="ja-table">
                     <table>
+                        <caption class="ja-alert" id="result"></caption>
                         <thead>
                             <tr>
                                 <th>
                                     Acciones
                                 </th>
                                 <th>
-                                    ID Usuario
+                                    Nombre
                                 </th>
                                 <th>
-                                    Nombre
+                                    Contrase&ntilde;a
                                 </th>
                                 <th>
                                     Correo
@@ -70,29 +69,80 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="body-u">
                             <% for (int i = 0; i < manage.getUsers().size(); i++) {%>
+                            <% if (!manage.getUsers().get(i).getId().equals(control.getActiveUser().getId()))%>
                             <tr>
                                 <td>
                                     <div>
-                                        <button type="button" id="'btn-s-' + <%= manage.getUsers().get(i).getId() %>"
-                                                onclick="updateData(<%= manage.getUsers().get(i).getId() %>)"
-                                                style="display: none">
+                                        <button type="button" id="btn-s-<%= manage.getUsers().get(i).getId() %>"
+                                                onclick="saveDataDB(<%= manage.getUsers().get(i).getId()%>, 'u')">
                                             <i class="fas fa-save"></i>
                                         </button>
-                                        <button type="button" id="'btn-e-' + <%= manage.getUsers().get(i).getId() %>"
-                                                onclick="editData(<%= manage.getUsers().get(i).getId() %>)">
+                                        <button type="button" id="btn-e-<%= manage.getUsers().get(i).getId()%>"
+                                                onclick="editData(<%= manage.getUsers().get(i).getId()%>)">
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
-                                        <button>
+                                        <button onclick="deleteDataDB('<%= manage.getUsers().get(i).getId()%>', <%= i%>)">
                                             <i class="fas fa-user-minus"></i>
                                         </button>
                                     </div>
                                 </td>
-                                <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getId()%>" disabled="true"></td>
+                                <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getId()%>" type="hidden"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getName()%>" disabled="true"></td>
+                                <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getPassword()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getEmail()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getRol()%>" disabled="true"></td>
+                            </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="ja-tables">
+                <h2>Enviar informaci&oacute;n</h2>
+                <div class="ja-table">
+                    <table>
+                        <caption class="ja-alert" id="result"></caption>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Acciones
+                                </th>
+                                <th>
+                                    Nombre
+                                </th>
+                                <th>
+                                    Apellido
+                                </th>
+                                <th>
+                                    Correo
+                                </th>
+                                <th>
+                                    Comentario
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="body-users-r">
+                            <% for (int i = 0; i < manage.getRequests().size(); i++) {%>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <button ></button>
+                                        <button type="button" id="btn-e-<%= manage.getRequests().get(i).getId()%>"
+                                                onclick="deleteDataDB('<%= manage.getRequests().get(i).getId()%>', <%= i%>, 'r')" />
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                        <button onclick="deleteDataDB('<%= manage.getRequests().get(i).getId()%>', <%= i%>, 'r')">
+                                            <i class="fas fa-user-minus"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getId()%>" type="hidden"></td>
+                                <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getName()%>" disabled="true"></td>
+                                <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getLastname() %>" disabled="true"></td>
+                                <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getEmail()%>" disabled="true"></td>
+                                <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getComment() %>" disabled="true"></td>
                             </tr>
                             <%}%>
                         </tbody>
@@ -130,7 +180,7 @@
                 <strong>Elaborated by Didacticos CSJ</strong>
             </div>   
         </footer>
-
+        <script src="JS/jquery-latest.min.js"></script>
         <script src="JS/manage.js" type="text/javascript"></script>
     </body>
 </html>

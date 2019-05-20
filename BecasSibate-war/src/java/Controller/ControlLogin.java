@@ -88,7 +88,6 @@ public class ControlLogin extends HttpServlet {
                         
                         ManageData manage = ManageData.getInstance();
                         manage.setUsers(userDAO.readAll());
-                        requestDAO.readAll();
                         manage.setRequests(requestDAO.readAll());
                         
                         message = "Manage.jsp";

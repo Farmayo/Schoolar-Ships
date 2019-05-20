@@ -25,6 +25,10 @@ public class Data {
         }
         return instance;
     }
+    
+    public void resetInstance() {
+        instance = null;
+    }
 
     public boolean isTryUser() {
         return tryUser;

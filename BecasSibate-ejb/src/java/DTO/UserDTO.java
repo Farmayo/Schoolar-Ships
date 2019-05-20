@@ -17,7 +17,7 @@ public class UserDTO {
     public UserDTO() {
     }
 
-    public UserDTO(String id, String name, String email, String password, String url_photo, String rol) {
+    public UserDTO(String id, String name, String email, String url_photo, String password, String rol) {
         this.id = id;
         this.name = name;
         this.email = email;
