@@ -1,13 +1,58 @@
-function Mostrar(id) {
-    if (document.getElementById(id) && document.getElementById('btn4')) {
-        var contenedor = document.getElementById(id);
-        contenedor.style.display = (contenedor.style.display == 'none') ? 'grid' : 'none';
-        var contenedor2 = document.getElementById('btn4');
-        contenedor2.style.display = (contenedor2.style.display == 'grid') ? 'none' : 'grid';
-    }
-    }
-    window.onload = function(){
-        Mostrar(id);
+function mostrar(index, letter) {
+    hide();
+    var con = document.getElementById("infoMain" + index);
+    con.style.display = 'block';
 
-    return true;
+    var div = document.getElementById("menuForm");
+    div.style.gridTemplateAreas = '"a b c"';
+}
+
+function hide() {
+    var x = document.getElementsByClassName("informacion");
+    console.log(x);
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.display = 'none';
+    }
+}
+
+function mostrar2(index) {
+    var x = document.getElementsByClassName("informacion2");
+    console.log(x);
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.display = 'none';
+    }
+    var x = document.getElementById("infoSet" + index);
+    x.style.display = 'block';
+    
+}
+
+function hide2() {
+    var x = document.getElementsByClassName("informacion2");
+    console.log(x);
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.display = 'none';
+    }
+}
+
+function btnShow(index) {
+    var x = document.getElementsByClassName("contenedor");
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+
+    x[index].style.display = "block";
+}
+
+function setEnabled(index) {
+    var x = document.getElementsByClassName("inpText");
+    for (var i = 0; i < x.length; i++) {
+        x[i].disabled = false;
+    }
+}
+
+function setDisabled(index) {
+    var x = document.getElementsByClassName("inpText");
+    for (var i = 0; i < x.length; i++) {
+        x[i].disabled = true;
+    }
 }

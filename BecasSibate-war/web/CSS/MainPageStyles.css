@@ -4,11 +4,23 @@
     height: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 #titulo {
+    border-style: none;
+    height: 30px;
+    width: 100%;
+    background: white;
     color: #D1D1D1;
     font-family: arial;
     font-size: 25px;
     font-weight: bold;
+}
+
+#titulo img {
+    left: 0px;
 }
 
 .imgUser{
@@ -25,12 +37,22 @@
     color: white;
 }
 
+.icons:hover {
+    background: white;
+    color: white;
 
+}
+
+#title {
+    font-size: 30px;
+    font-family: arial;
+}
 #btnExit {
     background: #B70914;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-color: gray;
+    color: white;
 }
 
 #btnSettings {
@@ -44,20 +66,16 @@
     border-style: none;
     margin-top: 0.5%;
     color: #C58B8F;
-    
+
 }
 
 .btnProfile img {
     margin-right: 10px;
     margin-left: 30px;
     text-align: end;
-    
-}
+    width: 20px;
+    height: 20px;
 
-label {
-    padding-bottom: 10px;
-    font-size: 30px;
-    text-align: center;
 }
 
 #sect1 {
@@ -76,7 +94,7 @@ label {
     text-align: center;
     padding: 10px 0 0 0;
     border-right: 2px gray solid;
-    
+
 }
 
 #sect1 #sect1-3 {
@@ -153,16 +171,28 @@ label {
     width: 100%;
 }
 
-.btnSelector{
+#menuForm{
     text-align: center;
     font-family: arial;
-    width: 100%;
     height: 5%;
-    display: grid;
+    display: flex;
     margin-bottom: 10px;
 }
 
-.btnSelector form button {
+#menuForm button:nth-of-type(1) {
+    grid-area: a;
+}
+
+#menuForm button:nth-of-type(2) {
+    grid-area: b;
+}
+
+#menuForm button:nth-of-type(3) {
+    grid-area: c;
+}
+
+#menuForm button:nth-of-type(4) {
+    grid-area: d;
 }
 
 .informacion {
@@ -170,7 +200,7 @@ label {
     border: 1px transparent solid;
     text-align: center;
     font-family: arial;
-    
+    display: none;
 }
 
 .informacion section {
@@ -202,55 +232,12 @@ label {
 }
 
 .botones {
+    width: 100%;
     border-radius: 10px;
     border-color: #E5E5E5;
     background: white;
     height: 70px;
     font-size: 25px;
     font-family: arial;
-    margin: 0 10px 5px 10px ;
-    padding: 0 20px 0 20px;
-}
-
-
-footer {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
-    column-gap: 5px;
-    margin: 1% 3% auto;
-}
-
-footer > div:first-of-type,
-footer > div:last-of-type{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px;
-}
-
-footer > div {
-    background: #BFBFBF;
-}
-
-footer > div button {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: transparent;
-    border-style: none;
-    padding: 5px;
-}
-
-footer > div button label {
-    margin: 0 10px 0 0;
-}
-
-footer > div button img {
-    width: 24px;
-}
-
-footer > div button:hover{
-    background: #D6D6D6;
 }

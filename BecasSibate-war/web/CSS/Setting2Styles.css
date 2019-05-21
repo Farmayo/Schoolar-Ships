@@ -1,8 +1,6 @@
 #setSect1 {
-    width: 100%;
+    width: 80%;
     margin: 10px;
-    display: block;
-    border: 1px black solid;
 }
 
 #setSect1-1 {
@@ -21,7 +19,7 @@
     border: 1px transparent solid;
     text-align: center;
     font-family: arial;
-
+    display: none;
 }
 
 .informacion2 #infoSet1-1 {
@@ -60,26 +58,57 @@
     display: grid;
 }
 
-.btnPrivacidad {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    width: 60px;
-    background: #B70914;
-    border: none;
-    padding: 12px 0 12px 0;
-    color: white;
-}
 
-.btnCancelar{
-    border-radius: 8px;
-    width: 60px;
+.btnPrivacidad:first-of-type {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 80px;
     background: #B70914;
     border: none;
-    padding: 12px 0 12px 0;
+    padding: 12px;
+    color: white;
     margin-bottom: 10px;
 }
 
-.infoPrivacidad section form {
+.btnPrivacidad:first-of-type:hover {
+    background: white;
+    color: #B70914;
+    box-shadow: inset 0 0 0 3px #B70914;
+}
+
+.btnPrivacidad:nth-of-type(2){
+    width: 80px;
+    background: #B70914;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btnPrivacidad:nth-of-type(2):hover {
+    background: white;
+    color: #B70914;
+    box-shadow: inset 0 0 0 3px #B70914;
+}
+
+.btnCancelar{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 80px;
+    background: #B70914;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btnCancelar:hover {
+    background: white;
+    color: #B70914;
+    box-shadow: inset 0 0 0 3px #B70914;
+}
+
+.infoPrivacidad section {
     height: 5%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -87,15 +116,25 @@
     margin: 10px auto;
 }
 
-.infoPrivacidad section form input {
+.infoPrivacidad section input {
     text-align: center;
     padding: 10px 0 10px 0;
-    right: 0px;
+    border-radius: 10px;
 }
 
+.infoPrivacidad section input:disabled {
+    background: #E5E5E5;
 
-.infoPrivacidad section form input:first-of-type {
-    padding: 10px 0 10px 0;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+}
+
+.infoPrivacidad section input:enabled {
+    background: lightgreen;
+}
+
+.btnSelector {
+    text-align: center;
+    font-family: arial;
+    height: 5%;
+    display: flex;
+    margin-bottom: 10px;
 }

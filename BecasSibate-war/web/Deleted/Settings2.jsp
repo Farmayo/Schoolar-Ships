@@ -19,7 +19,9 @@
         <section id="globalSect">
             <section id="sect1">
                 <section id="sect1-1">
-                    <label id="titulo">Alcald&iacute;a de Sibat&eacute</label>
+                    <form action="MainPage.jsp">
+                        <button id="titulo"><img src="Pictures/xdHome.png">Alcald&iacute;a de Sibat&eacute</button>
+                    </form>
                 </section>
                 <section id="sect1-3">
                     <form>
@@ -39,9 +41,9 @@
                         <h6 class="textInfo">Universidad ECCI</h6>
                     </section>
                     <section id="sect2-12">
-                        <form action="Settings.jsp">
+                        <form action="MainPage.jsp">
                             <button class="btnProfile">
-                                Configuraci&oacute;n <img src="Pictures/xdConfig.png">
+                                P&aacute;gina Principal<img src="Pictures/xdHome.png">
                             </button>
                         </form>
                     </section>
@@ -62,7 +64,7 @@
                             </form>
                         </div>
 
-                        <div class="informacion2" id="infoSet1">
+                        <div class="informacion2" id="infoSet1" style="display: none;">
                             <section id="infoSet1-1">
                                 <h3>Cambiar Foto de Perfil</h3>
                                 <button><img src="Pictures/xdArrowMenu.png"></button>
@@ -95,60 +97,36 @@
                                 </section> 
                             </div>
                         </div>
-                        <div class="informacion2" id="infoSet2">
+                        <div class="informacion2" id="infoSet2" style="display: none;">
                             <section id="infoSet1-1">
                                 <h3>Privacidad</h3>
                                 <button><img src="Pictures/xdArrowMenu.png"></button>
                             </section>
                             <section id="infoSet1-2">
-
                                 <section class="infoPrivacidad">
-                                    <h3>Cambiar Contraseña</h3>
-                                    <section>
-                                        <form>
+                                    <form>
+                                        <h3>Cambiar Contraseña</h3>
+                                        <section>
                                             <input type="text" name="Password" placeholder="Contraseña Actual" disabled/>
                                             <input type="text" name="NewPassword" placeholder="Contraseña Nueva" disabled/>
-                                            <input type="text" name="NewPasswordR" placeholder="Repetir Contraseña Nueva" disabled/>
-                                            <button class="btnPrivacidad">Editar</button>
-                                            <button class="btnPrivacidad" style="display:none;">Confirmar</button>
-                                            <button class="btnPrivacidad" style="display:none;">Cancelar</button>
-                                        </form>                                            
-                                    </section>
-                                </section>
-
-                                <section class="infoPrivacidad">
-                                    <h3>Numero de Telefono</h3>
-                                    <section>
-                                        <form>
+                                            <input type="text" name="NewPasswordR" placeholder="Repetir Contraseña Nueva" disabled/>                                   
+                                        </section>
+                                        <h3>Numero de Telefono</h3>
+                                        <section>
                                             <input type="text" name="Telephone" placeholder="##" disabled/>
-                                            <button class="btnPrivacidad">Editar</button>
-                                            <button class="btnPrivacidad" style="display:none;">Confirmar</button>
-                                            <button class="btnPrivacidad" style="display:none;">Cancelar</button>
-                                        </form>
-                                    </section>
-                                    <h3>Correo Electronico</h3>
-                                    <section>
-                                        <form>
+                                        </section>
+                                        <h3>Correo Electronico</h3>
+                                        <section>
                                             <input type="text" name="Email" placeholder="##" disabled/>
-                                            <button class="btnPrivacidad">Editar</button>
-                                            <button class="btnPrivacidad" style="display:none;">Confirmar</button>
-                                            <button class="btnPrivacidad" style="display:none;">Cancelar</button>
-                                        </form>
-                                    </section>
-                                </section>
-
-                                <section class="infoPrivacidad">
-                                    <h3>Carreras</h3>
-                                    <section>
-                                        <form>
+                                        </section>
+                                        <h3>Carreras</h3>
+                                        <section>
                                             <input type="text" name="Career" placeholder="##" disabled/>
-                                            <button class="btnPrivacidad">Editar</button>
-                                            <button class="btnPrivacidad" style="display:none;">Confirmar</button>
-                                        </form>
-                                    </section
-                                </section>
-                                <section>
-                                    <form action="MainPage.jsp">
+                                        </section>
+                                        <button class="btnPrivacidad">Editar</button>
+                                        <button class="btnPrivacidad" <!--style="display:none;"-->Confirmar</button>  
+                                    </form>
+                                    <form action="Settings2.jsp">
                                         <button class="btnCancelar">Cancelar</button>
                                     </form>
                                 </section>
