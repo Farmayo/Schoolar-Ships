@@ -88,11 +88,12 @@
                                         </button>
                                     </div>
                                 </td>
-                                <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getId()%>" type="hidden"></td>
+                                
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getName()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getPassword()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getEmail()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getRol()%>" disabled="true"></td>
+                                <input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getId()%>" type="hidden">
                             </tr>
                             <%}%>
                         </tbody>
@@ -138,11 +139,11 @@
                                         </button>
                                     </div>
                                 </td>
-                                <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getId()%>" type="hidden"></td>
                                 <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getName()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getLastname() %>" disabled="true"></td>
                                 <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getEmail()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getComment() %>" disabled="true"></td>
+                                <input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getId()%>" type="hidden">
                             </tr>
                             <%}%>
                         </tbody>

@@ -1,7 +1,10 @@
 package Controller;
 
+import DataControl.Data;
+import DataControl.ManageData;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +34,20 @@ public class ControlDeleteUseRManager extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         String id = request.getParameter("id");
+        
+        ManageData manage = ManageData.getInstance();
+        
+        for(int i = 0; i < manage.getUsers().size(); i++) {
+            if(manage.getUsers().get(i).getId().equals(id)) {
+                List users = manage.getUsers();
+                users.remove(i);
+                manage.setUsers(users);
+                break;
+            }
+        }
+        
         boolean flag = userStudent.deleteUSerStudent(id);
         
         String message = "";

@@ -1,8 +1,10 @@
 package Controller;
 
+import DataControl.ManageData;
 import Interfaces.IRequest;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -34,6 +36,17 @@ public class ControlDeleteRequestManager extends HttpServlet {
         // processRequest(request, response);
         
         String id = request.getParameter("id");
+        
+        ManageData manage = ManageData.getInstance();
+        
+        for(int i = 0; i < manage.getRequests().size(); i++) {
+            if(manage.getUsers().get(i).getId().equals(id)) {
+                List requests = manage.getRequests();
+                requests.remove(i);
+                manage.setUsers(requests);
+                break;
+            }
+        }
         
         boolean flag = requestDAO.delete(id);
         String message = "";
