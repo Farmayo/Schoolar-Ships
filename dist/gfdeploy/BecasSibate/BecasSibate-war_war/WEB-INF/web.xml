@@ -8,6 +8,26 @@
         <servlet-name>ControlRegister</servlet-name>
         <servlet-class>Controller.ControlRegister</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControlRequestInfoLogin</servlet-name>
+        <servlet-class>Controller.ControlRequestInfoLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControlUpdateUserManager</servlet-name>
+        <servlet-class>Controller.ControlUpdateUserManager</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControlDeleteUseRManager</servlet-name>
+        <servlet-class>Controller.ControlDeleteUseRManager</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControlDeleteRequestManager</servlet-name>
+        <servlet-class>Controller.ControlDeleteRequestManager</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControlExit</servlet-name>
+        <servlet-class>Controller.ControlExit</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControlLogin</servlet-name>
         <url-pattern>/ControlLogin</url-pattern>
@@ -15,6 +35,26 @@
     <servlet-mapping>
         <servlet-name>ControlRegister</servlet-name>
         <url-pattern>/ControlRegister</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControlRequestInfoLogin</servlet-name>
+        <url-pattern>/ControlRequestInfoLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControlUpdateUserManager</servlet-name>
+        <url-pattern>/ControlUpdateUserManager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControlDeleteUseRManager</servlet-name>
+        <url-pattern>/ControlDeleteUseRManager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControlDeleteRequestManager</servlet-name>
+        <url-pattern>/ControlDeleteRequestManager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControlExit</servlet-name>
+        <url-pattern>/ControlExit</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

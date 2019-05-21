@@ -29,7 +29,21 @@
         <a href="http://www.sibate-cundinamarca.gov.co/Paginas/default.aspx">
             Ir a la p&aacute;gina oficial de la alcald&iacute;a municipal de Sibat&eacute;
         </a>
-        <section class="globalSect">
+        <div class="ja-container--request hide" id="requestInfo">
+            <form>
+                <img src="Pictures/support.png">
+                <img src="Pictures/error.png" onclick="closeRequest()">
+                <h2>Enivanos tus inquietudes</h2>
+                <input type="text" placeholder="Nombres" id="nameR">
+                <input type="text" placeholder="Apellidos" id="lastnameR">
+                <input type="email" placeholder="Email" id="emailR">
+                <textarea rows="10" cols="35" placeholder="Escribe tus comentarios" id="commentR"></textarea>
+                <button type="button" onclick="request()"
+                        id="sendRequest" class="ja-container--btnlogin">Enviar</button>
+                <p class="ja-alert" id="responseRequest"></p>
+            </form>
+        </div>
+        <section class="globalSect">            
             <section id="formSect" class="ja-container-l">
                 <div>
                     <img src="Pictures/baseline-how_to_reg-24px.png">
@@ -38,32 +52,27 @@
 
                 <% Data control = Data.getInstance(); %>
 
-                <%if (control.isTryUser()) { %> 
-                <p class="ja-alert">* Usuario no encontrado</p> 
-                <%  control.setTryUser(false);
-                        } %>
-                <%if (control.isTryPassword()) { %>
-                <p class="ja-alert">* Contras&ntilde;a incorrecta</p>
-                <%  control.setTryPassword(false);
-                        }%>
+                <p class="ja-alert" id="alertLogin"></p> 
+                
                 <%@page import="Controller.ControlLogin" %>
-                <form action="ControlLogin" class="ja-container-lf">
+                <form class="ja-container-lf">
                     <div class="ja-container-lf1">
                         <p>Documento de identidad</p>
                         <div>
                             <div><img src="Pictures/baseline-assignment_ind-24px.png"></div>
-                            <input name="username" placeholder="Enter our Identity Document"/>
-                        </div>
+                            <input name="username" id="username" placeholder="Enter our Identity Document"/>
+                        </div> 
                     </div>
                     <div class="ja-container-lf1">
                         <p>Contrase&ntilde;a</p>
                         <div>
                             <div><img src="Pictures/baseline-vpn_key-24px.png"></div>
-                            <input type="password" name="password" placeholder="Enter your Password"/>
+                            <input type="password" id="password" name="password" placeholder="Enter your Password"/>
                         </div>
                     </div>
 
-                    <button id="btnLogin" class="ja-container--btnlogin" value="Enter" name="Enter">Ingresar</button>
+                    <button id="btnLogin" class="ja-container--btnlogin" 
+                            type="button" onclick="login()" name="Enter">Ingresar</button>
                     <br><br>
                     <input type="checkbox"/><a>Guardar sesión</a> || <a href="#">¿Olvidaste la contrase&ntilde;a</a>
                 </form>
@@ -81,7 +90,9 @@
                             National.
                         </p>
                         <button id="btnInfo1" class="ja-container--btnlogin" 
-                                name="SolicitarInfo" disabled>Solicitar informaci&oacute;n</button>
+                                type="button"
+                                onclick="openRequest()"
+                                name="SolicitarInfo">Solicitar informaci&oacute;n</button>
                     </form>
                 </section>
                 <section class="ja-container-lr">
@@ -128,5 +139,9 @@
                 <strong>Elaborated by Didacticos CSJ</strong>
             </div>   
         </footer>
+
+
+        <script src="JS/jquery-latest.min.js"></script>
+        <script src="JS/login.js" type="text/javascript"></script>
     </body>
 </html>
