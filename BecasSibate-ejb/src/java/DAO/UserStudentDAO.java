@@ -29,6 +29,23 @@ public class UserStudentDAO {
         return new Pair<>(userFlag, studentFlag);
     }
     
+    private boolean delete(Object key) {
+        StudentDAO studentDAO = new StudentDAO();
+        boolean studentFlag = studentDAO.delete(key);
+        
+        if(studentFlag) {
+            UserDAO userDAO = new UserDAO();
+            boolean userFlag = userDAO.create(userDTO);
+            if(userFlag) {
+                return true;
+            } else {
+                 return false;
+            }
+        }
+        
+        return false;
+    }
+    
     private UserDTO read(String key){
         UserDAO userDAO = new UserDAO();
         UserDTO out = userDAO.read(key);
