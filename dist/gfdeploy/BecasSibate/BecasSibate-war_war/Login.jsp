@@ -5,7 +5,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" href="CSS/LoginStyles.css" rel="stylesheet">
-        <link type="text/css" href="CSS/Footer_Header.css" rel="stylesheet">
         <link type="text/css" href="CSS/global.css" rel="stylesheet">
     </head>
     <body>

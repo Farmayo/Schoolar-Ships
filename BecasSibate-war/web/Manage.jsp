@@ -56,6 +56,9 @@
                                     Acciones
                                 </th>
                                 <th>
+                                    ID
+                                </th>
+                                <th>
                                     Nombre
                                 </th>
                                 <th>
@@ -69,7 +72,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody id="body-u">
+                        <tbody id="body-users-u">
                             <% for (int i = 0; i < manage.getUsers().size(); i++) {%>
                             <% if (!manage.getUsers().get(i).getId().equals(control.getActiveUser().getId()))%>
                             <tr>
@@ -83,17 +86,16 @@
                                                 onclick="editData(<%= manage.getUsers().get(i).getId()%>)">
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
-                                        <button onclick="deleteDataDB('<%= manage.getUsers().get(i).getId()%>', <%= i%>)">
+                                        <button onclick="deleteDataDB('<%= manage.getUsers().get(i).getId()%>', <%= i%>, 'u')">
                                             <i class="fas fa-user-minus"></i>
                                         </button>
                                     </div>
                                 </td>
-                                
+                                <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getId()%>" type="hidden"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getName()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getPassword()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getEmail()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getRol()%>" disabled="true"></td>
-                                <input class="<%= manage.getUsers().get(i).getId()%>" value="<%= manage.getUsers().get(i).getId()%>" type="hidden">
                             </tr>
                             <%}%>
                         </tbody>
@@ -109,6 +111,9 @@
                             <tr>
                                 <th>
                                     Acciones
+                                </th>
+                                <th>
+                                    ID
                                 </th>
                                 <th>
                                     Nombre
@@ -139,11 +144,12 @@
                                         </button>
                                     </div>
                                 </td>
+                                <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getId()%>" type="hidden"></td>
                                 <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getName()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getLastname() %>" disabled="true"></td>
                                 <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getEmail()%>" disabled="true"></td>
                                 <td><input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getComment() %>" disabled="true"></td>
-                                <input class="<%= manage.getRequests().get(i).getId()%>" value="<%= manage.getRequests().get(i).getId()%>" type="hidden">
+                                
                             </tr>
                             <%}%>
                         </tbody>

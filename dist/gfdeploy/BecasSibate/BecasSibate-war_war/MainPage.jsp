@@ -4,101 +4,221 @@
     Author     : farma
 --%>
 
+<%@page import="DataControl.Data"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" href="CSS/Footer_Header.css" rel="stylesheet">
         <link type="text/css" href="CSS/MainPageStyles.css" rel="stylesheet">
+        <link type="text/css" href="CSS/Setting2Styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/global.css" type="text/css">
         <title>Main Page</title>
     </head>
-    <body>
+    <body onload="btnShow(0)">
+        <% Data control = Data.getInstance(); %>
         <section id="globalSect">
             <section id="sect1">
                 <section id="sect1-1">
-                    <label>Alcaldia de Sibat&eacute;</label>
+                    <form action="MainPage.jsp">
+                        <button id="titulo"><img src="Pictures/xdHome.png">Alcald&iacute;a de Sibat&eacute</button>
+                    </form>
                 </section>
                 <section id="sect1-3">
-                        <form>
-                            <button class="icons"><img src="Pictures/xdConfig2.png"></button>
-                        </form>
-                        <form>
-                            <button class="icons" id="btnExit"><img src="Pictures/xdExit.png"></button>
-                        </form>
+                    <form>
+                        <button id="btnSettings"><img src="Pictures/xdConfig2.png"></button>
+                    </form>
+                    <%@page import="Controller.ControlExit" %>
+                    <form action="ControlExit">
+                        <button id="btnExit">Salir<img src="Pictures/xdExit.png"></button>
+                    </form>
                 </section>
             </section>
 
             <section id="sect2">
                 <section id="sect2-1">
                     <section id="sect2-11">
-                        <img class="imgUser" src="Pictures/IconUserLogin.png">
-                        <h4 class="textInfo">Nombre Completo</h4>
-                        <h5 class="textInfo">Carrera</h5>
-                        <h6 class="textInfo">Universidad ECCI</h6>
+                        <img class="imgUser" src="Pictures/xdProfile.png">
+                        <h4 class="textInfo"><%= control.getActiveUser().getName() %></h4>
+                        <h5 class="textInfo"><%= control.getActiveUser().getEmail() %></h5>
+                        <h5 class="textInfo">Ingenier&ia&iacute;a de Sistemas</h5>
                     </section>
                     <section id="sect2-12">
                         <form>
-                            <button class="btnProfile">Actualizar Informaci&oacute;n</button>
+                            <button class="btnProfile" onclick="btnShow(0)" type="button">
+                                P&aacute;gina Principal<img src="Pictures/xdHome.png">
+                            </button>
+                            <button class="btnProfile" onclick="btnShow(1)" type="button">
+                                Configuraci&oacute;n <img src="Pictures/xdConfig.png">
+                            </button>
+
                         </form>
-                        <form>
-                            <button class="btnProfile">Subir Archivos</button>
-                        </form>
-                        <form action="Settings.jsp">
-                            <button class="btnProfile">Configuraci&oacute;n</button>
-                        </form>
+                    </section>
+                    <div>
+                        <p>Elaborado por Didacticos CSJ</p>
+                    </div>
+                </section>
+
+                <section id="sect2-2" class="contenedor">
+                    <section id="sect2-21">
+                        <section id="sect2-211">
+                            <label id="title">INFO</label>
+                        </section>
+                        <section id="sect2-212">
+                            <div class="btnSelector">
+                                <form id="menuForm">
+                                    <button class="botones" id="btn1" onclick="mostrar(1)" type="button">Semestre Actual</button>
+                                    <button class="botones" id="btn2" onclick="mostrar(2)" type="button">Semestres</button>
+                                    <button class="botones" id="btn3" onclick="mostrar(3)" type="button">Cuentas de Cobro</button>
+                                    <button class="botones" id="btn4" onclick="mostrar(4)" type="button">
+                                        Solicitudes Comit&eacute; Tecnico</button>
+                                </form>
+                            </div>
+                            <div class="informacion" id="infoMain1">
+                                <section>
+                                    <h3>Semestre Actual</h3>
+                                    <button id="btnCerrar" onclick="hide()"><img src="Pictures/xdArrowMenu.png"></button>
+                                </section>
+                                <div>
+                                    <h1>Caracter&iacute;sticas actualmente NO disponibles</h1>
+                                </div>
+                            </div>
+
+                            <div class="informacion" id="infoMain2">
+                                <section>
+                                    <h3>Semestres</h3>
+                                    <button id="btnCerrar" onclick="hide()"><img src="Pictures/xdArrowMenu.png"></button>
+                                </section>
+                                <div>
+                                    <h1>Caracter&iacute;sticas actualmente NO disponibles</h1>
+                                </div>
+                            </div>
+
+                            <div class="informacion" id="infoMain3">
+                                <section>
+                                    <h3>Cuentas de Cobro</h3>
+                                    <button id="btnCerrar" onclick="hide()"><img src="Pictures/xdArrowMenu.png"></button>
+                                </section>
+                                <div>
+                                    <h1>Caracter&iacute;sticas actualmente NO disponibles</h1>
+                                </div>
+                            </div>
+
+                            <div class="informacion" id="infoMain4">
+                                <section>
+                                    <h3>Solicitudes Comit&eacute; Tecnico</h3>
+                                    <button id="btnCerrar" onclick="hide()"><img src="Pictures/xdArrowMenu.png"></button>
+                                </section>
+                                <div>
+                                    <h1>Caracter&iacute;sticas actualmente NO disponibles</h1>
+                                </div>
+                            </div>
+                        </section>
                     </section>
                 </section>
 
-                <section id="sect2-2">
-                    <section id="sect2-21">
-                        <section id="sect2-2111">
-                            <label>INFO</label>
-                        </section>
-                        <section id="sect2-211">
-                            <section>
-                                <form>
-                                    <button>Semestres</button>
-                                </form>
-                            </section>
-                            <section>
-                                <form>
-                                    <button>Solicitudes Comite Tecnico</button>
-                                </form>
-                            </section>
-                            <section>
-                                <form>
-                                    <button>Cuentas de Cobro</button>
-                                </form>
-                            </section>
-                        </section>
-                        <section id="sect2-212">
-                            <section>
-                                <form>
-                                    <button>Solicitudes Comit&eacute; Tecnico</button>
-                                </form>
-                            </section>
-                        </section>
-                        <section id="sect2-213">
-                            HOLA
-                        </section>
+                <section id="setSect1" class="contenedor">
+                    <section id="setSect1-1">
+                        <label id="title">Configuraci&oacute;n</label>
                     </section>
-                    <section id="sect2-22">
+                    <section id="setSect1-2">
+                        <div class="btnSelector">
+                            <button class="botones" id="btn1" onclick="mostrar2(1)">Cambiar Foto de Perfil</button>
+                            <button class="botones" id="btn2" onclick="mostrar2(2)">Privacidad</button>
+                        </div>
 
+                        <div class="informacion2" id="infoSet1">
+                            <section id="infoSet1-1">
+                                <h3>Cambiar Foto de Perfil</h3>
+                                <button id="btnCerrar" onclick="hide2()"><img src="Pictures/xdArrowMenu.png"></button>
+                            </section>
+                            <div id="infoSet1-2">
+                                <section id="infoSet1-21">
+                                    <section id="infoSet1-211">
+                                        <img class="imgUser" src="Pictures/xdProfile.png">
+                                    </section>
+                                    <section id="infoSet1-212">
+                                        <section>
+                                            <form>
+                                                <button class="icons" onclick="uploadFile('ja-image--doc1')" type="button"><img src="Pictures/xdDelete.png"></button>
+                                                <h4>Borrar</h4>
+                                            </form>
+                                        </section>
+                                        <section>
+                                            <form>
+                                                <button class="icons" onclick="uploadFile('ja-image--doc1')" type="button"><img src="Pictures/xdUploadPC.png"></button>
+                                                <h4>Cargar desde el Computador</h4>
+                                            </form>
+                                        </section>
+                                        <section>
+                                            <form>
+                                                <button class="icons" onclick="uploadFile('ja-image--doc1')" type="button"><img src="Pictures/xdUploadURL.png"></button>
+                                                <h4>Cargar desde Internet</h4>
+                                            </form>
+                                        </section>
+                                    </section>
+                                </section> 
+                            </div>
+                        </div>
+                        <div class="informacion2" id="infoSet2">
+                            <section id="infoSet1-1">
+                                <h3>Privacidad</h3>
+                                <button id="btnCerrar" onclick="hide2()"><img src="Pictures/xdArrowMenu.png"></button>
+                            </section>
+                            <section id="infoSet1-2">
+                                <section class="infoPrivacidad">
+                                    <h3>Cambiar Contraseña</h3>
+                                    <section>
+                                        <input class="inpText" type="text" name="Password" value="<%= control.getActiveUser().getPassword() %>" disabled="true"/>
+                                        <input class="inpText" type="text" name="NewPassword" placeholder="Contraseña Nueva" disabled="true"/>
+                                        <input class="inpText" type="text" name="NewPasswordR" placeholder="Repetir Contraseña Nueva" disabled="true"/>                                   
+                                    </section>
+                                        <h3>Correo Electr&oacute;nico</h3>
+                                    <section>
+                                        <input class="inpText" type="text" name="Email" value="<%= control.getActiveUser().getEmail() %>" disabled="true"/>
+                                    </section>
+                                    <button class="btnPrivacidad" onclick="setEnabled(0)">Editar</button>
+                                    <button class="btnPrivacidad" onclick="setDisabled(0)">Confirmar</button>
+                                    <button class="btnCancelar">Cancelar</button>
+                                </section>
+                            </section>
+                        </div>
                     </section>
                 </section>
             </section>
         </section>
         <footer>
-            <section id="footerSect">
-                <section>Siguenos en Nuestras Redes Sociales</section>
-                <section><a href="#">Instagram <img src="Pictures/instagramLogo.png"></a></section>
-                <section><a href="#">Faceboook <img src="Pictures/facebookLogo.png"></a></section>
-                <section><a href="#">Twitter <img src="Pictures/twitterLogo.png"></a></section>
-                <section><a href="#">YouTube <img src="Pictures/youtubeLogo.png"></a></section>
-                <section><a href="#">Desarrollado por Didacticos CSJ</a></section>            
-            </section>
+            <div>Siguenos en nuestras </div>
+            <div>
+                <button>
+                    <label>Instagram</label>
+                    <img src="Pictures/instagramLogo.png">
+                </button>
+            </div>
+            <div>
+                <button>
+                    <label>Facebook</label>
+                    <img src="Pictures/facebookLogo.png">
+                </button>
+            </div>
+            <div>
+                <button>
+                    <label>Twitter</label>
+                    <img src="Pictures/twitterLogo.png">
+                </button>
+            </div>
+            <div>
+                <button>
+                    <label>YouTube</label>
+                    <img src="Pictures/youtubeLogo.png">
+                </button>
+            </div>
+            <div>
+                <strong>Elaborated by Didacticos CSJ</strong>
+            </div>   
         </footer>
-    </body>
 
+        <script src="JS/register.js"></script>
+        <script src="JS/MainPage.js" type="text/javascript"></script>
+    </body>
 </html>

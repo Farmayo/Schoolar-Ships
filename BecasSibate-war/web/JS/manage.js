@@ -58,7 +58,7 @@ function saveDataDB(classId) {
 }
 
 function deleteDataDB(classId, index, table) {
-    
+    console.log(table);
     var servlet = "";
     if(table === 'u') {
         servlet = 'ControlDeleteUseRManager';

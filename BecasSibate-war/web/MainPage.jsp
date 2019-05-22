@@ -4,6 +4,7 @@
     Author     : farma
 --%>
 
+<%@page import="DataControl.Data"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,8 @@
         <link rel="stylesheet" href="CSS/global.css" type="text/css">
         <title>Main Page</title>
     </head>
-    <body onload="btnShow(1)">
+    <body onload="btnShow(0)">
+        <% Data control = Data.getInstance(); %>
         <section id="globalSect">
             <section id="sect1">
                 <section id="sect1-1">
@@ -26,7 +28,8 @@
                     <form>
                         <button id="btnSettings"><img src="Pictures/xdConfig2.png"></button>
                     </form>
-                    <form>
+                    <%@page import="Controller.ControlExit" %>
+                    <form action="ControlExit">
                         <button id="btnExit">Salir<img src="Pictures/xdExit.png"></button>
                     </form>
                 </section>
@@ -36,9 +39,9 @@
                 <section id="sect2-1">
                     <section id="sect2-11">
                         <img class="imgUser" src="Pictures/xdProfile.png">
-                        <h4 class="textInfo">Nombre Completo</h4>
-                        <h5 class="textInfo">Carrera</h5>
-                        <h6 class="textInfo">Universidad ECCI</h6>
+                        <h4 class="textInfo"><%= control.getActiveUser().getName() %></h4>
+                        <h5 class="textInfo"><%= control.getActiveUser().getEmail() %></h5>
+                        <h5 class="textInfo">Ingenier&ia&iacute;a de Sistemas</h5>
                     </section>
                     <section id="sect2-12">
                         <form>
@@ -77,7 +80,7 @@
                                     <button id="btnCerrar" onclick="hide()"><img src="Pictures/xdArrowMenu.png"></button>
                                 </section>
                                 <div>
-                                    <h1>Caracteristicas actualmente NO disponibles</h1>
+                                    <h1>Caracter&iacute;sticas actualmente NO disponibles</h1>
                                 </div>
                             </div>
 
@@ -87,7 +90,7 @@
                                     <button id="btnCerrar" onclick="hide()"><img src="Pictures/xdArrowMenu.png"></button>
                                 </section>
                                 <div>
-                                    <h1>Caracteristicas actualmente NO disponibles</h1>
+                                    <h1>Caracter&iacute;sticas actualmente NO disponibles</h1>
                                 </div>
                             </div>
 
@@ -97,7 +100,7 @@
                                     <button id="btnCerrar" onclick="hide()"><img src="Pictures/xdArrowMenu.png"></button>
                                 </section>
                                 <div>
-                                    <h1>Caracteristicas actualmente NO disponibles</h1>
+                                    <h1>Caracter&iacute;sticas actualmente NO disponibles</h1>
                                 </div>
                             </div>
 
@@ -107,7 +110,7 @@
                                     <button id="btnCerrar" onclick="hide()"><img src="Pictures/xdArrowMenu.png"></button>
                                 </section>
                                 <div>
-                                    <h1>Caracteristicas actualmente NO disponibles</h1>
+                                    <h1>Caracter&iacute;sticas actualmente NO disponibles</h1>
                                 </div>
                             </div>
                         </section>
@@ -166,21 +169,13 @@
                                 <section class="infoPrivacidad">
                                     <h3>Cambiar Contraseña</h3>
                                     <section>
-                                        <input class="inpText" type="text" name="Password" placeholder="Contraseña Actual" disabled="true"/>
+                                        <input class="inpText" type="text" name="Password" value="<%= control.getActiveUser().getPassword() %>" disabled="true"/>
                                         <input class="inpText" type="text" name="NewPassword" placeholder="Contraseña Nueva" disabled="true"/>
                                         <input class="inpText" type="text" name="NewPasswordR" placeholder="Repetir Contraseña Nueva" disabled="true"/>                                   
                                     </section>
-                                    <h3>Numero de Telefono</h3>
+                                        <h3>Correo Electr&oacute;nico</h3>
                                     <section>
-                                        <input class="inpText" type="text" name="Telephone" placeholder="##" disabled="true"/>
-                                    </section>
-                                    <h3>Correo Electronico</h3>
-                                    <section>
-                                        <input class="inpText" type="text" name="Email" placeholder="##" disabled="true"/>
-                                    </section>
-                                    <h3>Carreras</h3>
-                                    <section>
-                                        <input class="inpText" type="text" name="Career" placeholder="##" disabled="true"/>
+                                        <input class="inpText" type="text" name="Email" value="<%= control.getActiveUser().getEmail() %>" disabled="true"/>
                                     </section>
                                     <button class="btnPrivacidad" onclick="setEnabled(0)">Editar</button>
                                     <button class="btnPrivacidad" onclick="setDisabled(0)">Confirmar</button>
